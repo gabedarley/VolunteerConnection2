@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+organizations = [
+    {:name => 'Second Harvest'}
+]
+organizations.each do |org|
+    Organization.create!(org)
+end
