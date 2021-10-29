@@ -10,5 +10,25 @@
   <%= @organization.address %>
 </p>
 
+<p>
+  <strong>Web Address:</strong>
+  <%= @organization.web_address %>
+</p>
+
+<p>
+  <strong>Primary Contact Phone:</strong>
+  <%= @organization.contact_phone %>
+</p>
+
+<p>
+  <strong>Primary Contact Email:</strong>
+  <%= @organization.contact_email %>
+</p>
+
+<p>
+  <strong>Organization Type:</strong>
+  <%= @organization.category %>
+</p>
+
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
