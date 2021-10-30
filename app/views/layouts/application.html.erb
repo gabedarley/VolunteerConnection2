@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Vc2</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+  <head>
+    <title>Volunteer Connect</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/fontawesome-all.min.js"></script>
+<link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  </head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="https://spark-small-3000.codio.io/home/index">Home</a>
+      <a class="nav-item nav-link" href="https://spark-small-3000.codio.io/organizations">Organizations</a>
+      <a class="nav-item nav-link" href="https://spark-small-3000.codio.io/events">Events</a>
+    </div>
+  </div>
+</nav>
+  
+  <body>
+    <%= yield %>
+  </body>
+  <div>
     
-</head>
-<body>
+  </div>
+  <div class="footer ">
+  <!-- Grid container -->
+  <div class="container-fluid p-4 bg-light">
+  <div class = "container">
+    <h5 class="text-uppercase">Volunteer Connect</h5>
+      <p>
+        If you need support or want to see improvements to the site, feel free
+        to message the developers! 
+      </p>
+      <p>
+        <i class="fas fa-inbox me-3"></i>
+        gdarley@tulane.edu
+      </p>
+    <p><i class="fas fa-map-marker-alt me-3"></i> 6823 St. Charles Ave, New Orleans, LA 70118</p>
+  </div>
 
-<%= yield %>
+  </div>
+  <!-- Grid container -->
 
-</body>
+</div>
+  
 </html>
