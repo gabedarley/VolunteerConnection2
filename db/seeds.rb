@@ -109,11 +109,9 @@ events.each do |event|
 end
 
 users = [
-   {:name => 'Chloe Uhls',
-    :email => 'chloeu99@gmail.com',
+   {
     :username => 'chloeu99',
-    :password => 'ilikedogs',
-    :category => 'environment'}
+    :password => 'ilikedogs'}
     
 users.each do |user|
     User.create!(user)

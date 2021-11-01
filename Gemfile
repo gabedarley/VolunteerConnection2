@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails'
+gem 'devise', '~> 4.2'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.3'
