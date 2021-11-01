@@ -79,7 +79,7 @@ organizations.each do |org|
 end
 
 events = [
-  {:name => 'Food Sorting and Packing',
+  {:name => 'Food Sorting',
     :description => 'Volunteers work in the warehouse re-pack room to separate donated food into specific categories and repack food into boxes that go out for distribution to member agencies.',
     :date => '10/22/2021',
     :start_time => '09:00',
