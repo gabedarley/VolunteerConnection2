@@ -46,3 +46,4 @@ group :production do
   gem 'pg', '~> 0.21'
 end
 
+gem 'bcrypt', '~> 3.1.7'
