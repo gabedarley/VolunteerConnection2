@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :add_email_to_users
   get 'home/index'
   root to: "home#index"
   resources :organizations, :events
   get 'home/index', to: 'static_pages#home', as: 'home'
-  #get '/auth/:provider/callback', to: 'sessions#omniauth'
+  get '/auth/:provider/callback', to: 'sessions#omniauth'
   
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
