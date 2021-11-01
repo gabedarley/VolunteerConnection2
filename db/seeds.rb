@@ -83,7 +83,7 @@ events = [
     :description => 'Volunteers work in the warehouse re-pack room to separate donated food into specific categories and repack food into boxes that go out for distribution to member agencies.',
     :date => '10/22/2021',
     :start_time => '09:00',
-    :end_time => '12:00',
+    :end_time => '12:00',javascript:void(0)
     :link => 'https://shfbgnoa.volunteerhub.com/event/17d82249-caeb-4c1b-87a3-1bc5e6bdf67e'},
   {:name => 'Take Paws Rescue',
     :description => 'Volunteers pay to play with puppies to raise funding for foster dogs.',
@@ -106,4 +106,15 @@ events = [
 ]
 events.each do |event|
     Event.create!(event)
+end
+
+users = [
+   {:name => 'Chloe Uhls',
+    :email => 'chloeu99@gmail.com',
+    :username => 'chloeu99',
+    :password => 'ilikedogs',
+    :category => 'environment'}
+    
+users.each do |user|
+    User.create!(user)
 end
