@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :add_email_to_users
   get 'home/index'
   root to: "home#index"
   resources :organizations, :events
