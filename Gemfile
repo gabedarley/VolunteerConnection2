@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'dotenv-rails'
-gem 'devise', '~> 4.2'
+gem 'devise'
+gem 'cancancan', '~> 1.10'
+gem 'rolify'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
