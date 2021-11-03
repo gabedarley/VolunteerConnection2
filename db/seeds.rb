@@ -112,6 +112,10 @@ users = [
    {
     :username => 'chloeu99',
     :password => 'ilikedogs'}
+   {
+    :username => 'gabedarley',
+    :password => 'password'}
+    
 ]
     
 users.each do |user|
