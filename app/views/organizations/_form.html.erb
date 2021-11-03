@@ -1,6 +1,7 @@
 <%= form_for(@organization) do |f| %>
   <% if @organization.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-danger alert-dismissible" >
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
       <h2><%= pluralize(@organization.errors.count, "error") %> prohibited this organization from being saved:</h2>
 
       <ul>
@@ -8,23 +9,66 @@
         <li><%= message %></li>
       <% end %>
       </ul>
+      
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :name %>
+      <font color ="red">*</font>
+    </div>
+    <div class="col-sm-10">
+      <%= f.text_field :name %>
+    </div>
+    
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :address %>
+    </div>
+    <div class="col-sm-10">
+      <%= f.text_field :address %>
+    </div>
+    
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :web_address %>
+      <font color ="red">*</font>
+    </div>
+    <div class="col-sm-10">
+      <%= f.text_field :web_address %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :web_address %><br>
-    <%= f.text_field :web_address %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+      
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :contact_phone %>
+      <%= f.label :contact_phone , "(XXX-XXX-XXXX)"%>
+    </div>
+    <div class="col-sm-10">
+      <%= f.text_field :contact_phone %>
+    </div>
+      
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :contact_email %>
+    </div>
+    <div class="col-sm-10">
+      <%= f.text_field :contact_email %>
+    </div>
+      
+    <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.label :category %>
+      <font color ="red">*</font>
+    </div>
+    <div class="col-sm-10">
+<!--       <%= f.text_field :category %> -->
+      <%= f.select :category, ['Food', 'Advocacy', 'Garden', 'Education', 'Build', 'Relief', 'Health', 'Rescue', 'Other'] %>
+    </div>
+      
+  <div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
