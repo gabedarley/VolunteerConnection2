@@ -101,13 +101,46 @@ events = [
     :description => 'Join United By Blue and community partners for a cleanup of Lake Pontchartrain!',
     :date => '11/13/2021',
     :start_time => '10:00',
-    :end_time => '1:00',
+    :end_time => '13:00',
     :link => 'https://www.eventbrite.com/e/united-by-blue-lake-pontchartrain-cleanup-new-orleans-la-registration-164391470313?aff=ebdssbdestsearch'}, 
+  {:name => 'New Orleans Memorial Stair Climb',
+    :description => 'We will once again pay tribute to the 343 firefighters, 60 law enforcement officers, and 8 EMTs that made the ultimate sacrifice 20 years ago. Our climb will also honor those first responders from across the Gulf Coast that have perished during the previous year.',
+    :date => '11/20/2021',
+    :start_time => '07:30',
+    :end_time => '11:30',
+    :link => 'https://www.eventbrite.com/e/new-orleans-memorial-stair-climb-tickets-187897154447?aff=ebdssbdestsearch'},
+  {:name => 'Chalmette National Cemetery Volunteer Event',
+    :description => 'The cleaning is starting up again with a huge push over the next year to get all headstones looking like new.',
+    :date => '11/11/2021',
+    :start_time => '08:00',
+    :end_time => '12:00',
+    :link => 'https://www.eventbrite.com/e/chalmette-national-cemetery-volunteer-event-tickets-201845634727?aff=ebdssbdestsearch'}, 
+  {:name => 'Covid Relief & Volunteers Training Program in N.O',
+    :description => 'This is a free volunteer training program in New Orleans to help foreign and domestic better learn how to treat covid and recover from it',
+    :date => '02/16/2021',
+    :start_time => '10:00',
+    :end_time => '18:00',
+    :link => 'https://www.eventbrite.com/e/covid-relief-volunteers-training-program-in-no-tickets-167587834725?aff=ebdssbdestsearch'}, 
+  {:name => 'Help build a playground at Sherwood Forest Elementary',
+    :description => 'Volunteers help build a playground for an elementary school in NOLA.',
+    :date => '11/02/2021',
+    :start_time => '08:30',
+    :end_time => '16:30',
+    :link => 'https://www.eventbrite.com/e/help-build-a-playground-at-sherwood-forest-elementary-tickets-180105017957?aff=ebdssbdestsearch'}, 
+  {:name => 'Volunteer Online: Help Foreign Students Learn English',
+    :description => 'ENGin is looking for volunteers aged 14-25 to serve as speaking buddies for international students.',
+    :date => '11/03/2021',
+    :start_time => '00:00',
+    :end_time => '00:00',
+    :link => 'https://forms.gle/QSXn8jN8uUPoMrK26'}
+   
 ]
+
 events.each do |event|
     Event.create!(event)
 end
 
+=begin
 users = [
    {
     :email => 'cuhls@tulane.edu',
@@ -117,7 +150,7 @@ users = [
     :encrypted_password => 'password123'},
    {
     :email => 'emoy@tulane.edu',
-    :encrypted_password 'password302'=> },
+    :encrypted_password =>'password302' },
    {
     :email => 'skellum@tulane.edu',
     :encrypted_password => 'password239'},
@@ -175,3 +208,4 @@ users = [
 users.each do |user|
     User.create!(user)
 end
+=end
