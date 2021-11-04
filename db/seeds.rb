@@ -266,72 +266,74 @@ events.each do |event|
     Event.create!(event)
 end
 
-=begin
+# User.create(email: "test@example.com", password: "password", password_confirmation: "password")
+
+
 users = [
    {
     :email => 'cuhls@tulane.edu',
-    :encrypted_password => 'ilikedogs'},
+    :password => 'ilikedogs'},
    {
     :email => 'gdarley@tulane.edu',
-    :encrypted_password => 'password123'},
+    :password => 'password123'},
    {
     :email => 'emoy@tulane.edu',
-    :encrypted_password =>'password302' },
+    :password =>'password302' },
    {
     :email => 'skellum@tulane.edu',
-    :encrypted_password => 'password239'},
+    :password => 'password239'},
    {
     :email => 'akurdia@tulane.edu',
-    :encrypted_password => 'password873'},
+    :password => 'password873'},
    {
     :email => 'sbroth@tulane.edu',
-    :encrypted_password => 'password888'},
+    :password => 'password888'},
    {
     :email => 'obulter@tulane.edu',
-    :encrypted_password => 'password399'},
+    :password => 'password399'},
    {
     :email => 'ocanosa@tulane.edu',
-    :encrypted_password => 'password033'},
+    :password => 'password033'},
    {
     :email => 'adonahue@tulane.edu',
-    :encrypted_password => 'password328'},
+    :password => 'password328'},
    {
     :email => 'bgarner@tulane.edu',
-    :encrypted_password => 'password022'},
+    :password => 'password022'},
    {
     :email => 'ggilliom@tulane.edu',
-    :encrypted_password => 'password477'},
+    :password => 'password477'},
    {
     :email => 'bkahn@tulane.edu',
-    :encrypted_password => 'password832'},
+    :password => 'password832'},
    {
     :email => 'jlehner@tulane.edu',
-    :encrypted_password => 'password473'},
+    :password => 'password473'},
    {
     :email => 'cmaira@tulane.edu',
-    :encrypted_password => 'password678'},
+    :password => 'password678'},
    {
     :email => 'mmotz@tulane.edu',
-    :encrypted_password => 'password002'},
+    :password => 'password002'},
    {
     :email => 'econnell@tulane.edu',
-    :encrypted_password => 'password453'},
+    :password => 'password453'},
    {
     :email => 'kromer@tulane.edu',
-    :encrypted_password => 'password193'},
+    :password => 'password193'},
    {
     :email => 'msender@tulane.edu',
-    :encrypted_password => 'password772'},
+    :password => 'password772'},
    {
     :email => 'yzhang@tulane.edu',
-    :encrypted_password => 'password892'},
+    :password => 'password892'},
    {
     :email => 'cmayberry@tulane.edu',
-    :encrypted_password => 'password444'},
+    :password => 'password444'},
     
 ]
     
 users.each do |user|
     User.create!(user)
 end
-=end
+
