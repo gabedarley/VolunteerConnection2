@@ -1,7 +1,9 @@
+<div class="container p-5 my-5 bg-light text-dark">
 <header>
   <h2>Log in</h2>
 </header>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
   <div class="devise-container">
     <div class="row">
       <div class="form-group">
@@ -29,5 +31,7 @@
       </div>
     </div>
   </div>
+
   <%= f.submit "Log in", class: "btn btn-lg btn-primary" %>
 <% end %>
+</div>
