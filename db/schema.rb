@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211102123908) do
+ActiveRecord::Schema.define(version: 20211104051802) do
 
   create_table "events", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "date"
-    t.string "start_time"
-    t.string "end_time"
-    t.string "link"
+    t.string  "name"
+    t.string  "description"
+    t.string  "date"
+    t.string  "start_time"
+    t.string  "end_time"
+    t.string  "link"
+    t.integer "organization_id"
   end
 
   create_table "organizations", force: :cascade do |t|
