@@ -23,7 +23,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.name %></td>
+        <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %></td>
         <td><%= event.date %></td>
         <td><%= event.start_time %></td>
         <td><%= event.end_time %></td>

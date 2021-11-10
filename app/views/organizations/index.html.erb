@@ -21,7 +21,7 @@
   <tbody>
     <% @organizations.each do |organization| %>
       <tr>
-        <td><%= organization.name %></td>
+        <td><%= link_to "#{organization.name}", "#{organization.web_address}",:target => '_blank', style: 'color:#0080ff;', class: 'css_class' %></td>
         <td><%= organization.category %></td> 
 
         <td><%= link_to 'Show', organization, class:"btn btn-secondary btn-sm"  %></td>
