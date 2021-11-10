@@ -17,7 +17,7 @@
 
 <p>
   <strong>Web Address:</strong>
-  <%= @organization.web_address %>
+  <%= link_to "Explore #{@organization.name}", "#{@organization.web_address}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
 </p>
 
 <p>

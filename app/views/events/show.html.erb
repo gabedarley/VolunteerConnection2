@@ -23,7 +23,7 @@
 
 <p>
   <strong>Link:</strong>
-  <%= @event.link %>
+  <%= link_to "#{@event.name}", "#{@event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
