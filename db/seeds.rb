@@ -6,147 +6,147 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 organizations = [
-    #0
+    #1
   {:name => 'Second Harvest', 
     :address => '700 Edwards Ave, New Orleans, LA 70123', 
     :web_address => 'https://no-hunger.org/', 
     :contact_phone => '504-734-1322', 
     :contact_email => 'help@secondharvest.org', 
     :category => 'Food'}, 
-    #1
+    #2
   {:name => 'NOLA Tree Project',
     :address => '5701 Canal Blvd, New Orleans, LA 70124', 
     :web_address => 'https://nolatreeproject.org/', 
     :contact_phone => '504-415-8434', 
     :contact_email => 'info@nolatreeproject.org',
     :category => 'Garden'}, 
-    #2
+    #3
   {:name => 'Grow Dat Youth Farm',
     :address => '150 Zachary Taylor Dr, New Orleans, LA 70124',
     :web_address => 'https://growdatyouthfarm.org/',
     :contact_phone => '504-300-1132', 
     :contact_email => 'info@growdatyouthfarm.org',
     :category => 'Garden'},
-    #3
+    #4
   {:name => 'Take Paws Rescue',
     :address => '2730 Banks St, New Orleans, LA 70119',
     :web_address => 'https://www.takepawsrescue.org/',
     :contact_phone => '999-999-9999',
     :contact_email => 'adopt@takepawsrescue.org',
     :category => 'Rescue'},
-    #4
+    #5
   {:name => 'Habitat for Humanity',
     :address => '2900 Elysian Fields Ave, New Orleans, LA 70122',
     :web_address => 'https://habitat-nola.org/',
     :contact_phone => '504-861-2077',
     :contact_email => 'info@habitat-nola.org',
     :category => 'Build'},
-    #5
+    #6
   {:name => 'Audobon Nature Institute',
    :address => '6500 Magazine St, New Orleans, LA 70118',
    :web_address => 'https://audubonnatureinstitute.org/',
    :contact_phone => '504-212-5377',
    :contact_email => 'volunteer@auduboninstitute.org',
    :category => 'Education'},
-    #6
+    #7
   {:name => 'Cajun Navy Relief',
    :address => 'Cajun Navy Relief, Inc. PO Box 791632 New Orleans, LA 70179',
    :web_address => 'https://www.cajunnavyrelief.com/',
    :contact_phone => '504-517-6289',
    :contact_email => 'info@cajunnavyrelief.com',
    :category => 'Relief' },
-    #7
+    #8
   {:name => 'Heart N Hands',
    :address => '4460 Saint Bernard Ave, New Orleans, LA 70122',
    :web_address => 'https://www.heartnhands.org/',
    :contact_phone => '800-276-8082',
    :contact_email => 'info@heartnhands.org',
    :category => 'Health'},
-    #8
+    #9
   {:name => 'Edible Schoolyard',
    :address => '300 N Broad St, New Orleans, LA 70119',
    :web_address => 'https://esynola.org/',
    :contact_phone => '504-267-9038',
    :contact_email => 'amelia@esynola.org',
    :category => 'Garden' },
-    #9
+    #10
   {:name => 'Nola 4 Women',
    :address => '5208 Magazine St #164, New Orleans, LA 70115',
    :web_address => 'https://www.nola4women.org/',
    :contact_phone => '999-999-9999',
    :contact_email => 'kathy@nola4women.org',
    :category => 'Advocacy'},
-    #10
+    #11
   {:name => 'Planned Parenthood New Orleans',
    :address => '4636 S Claiborne Ave Ste 100, New Orleans, LA 70125',
    :web_address => 'https://www.plannedparenthood.org/health-center/louisiana/new-orleans/70125/new-orleans-health-center-3961-91650',
    :contact_phone => '504-897-9200',
    :contact_email => 'none@gmail.com',
    :category => 'Health'},
-    #11
+    #12
   {:name => 'Green Light New Orleans',
    :address => '8203 Jeannette St, New Orleans, LA 70118', 
    :web_address => 'http://www.greenlightneworleans.org/', 
    :contact_phone => '504-324-2429', 
    :contact_email => 'volunteer@greenlightneworleans.org',
    :category => 'Build'},
-    #12
+    #13
   {:name => 'Dragon Cafe',
    :address => '4600 St. Charles Avenue New Orleans, LA 70115', 
    :web_address => 'http://stgeorge-nola.org/dragon/', 
    :contact_phone => '504-899-2811', 
    :contact_email => 'info@stgeorge-nola.org',
    :category => 'Food'},
-    #13
+    #14
   {:name => 'Grace at the Greenlight',
    :address => '1528 Oretha Castle Haley Blvd, New Orleans, LA 70130', 
    :web_address => 'https://graceatthegreenlight.org/', 
    :contact_phone => '504-239-4544', 
    :contact_email => 'sarah@graceatthegreenlight.org',
    :category => 'Food'},
-    #14
+    #15
   {:name => 'Jericho Road',
    :address => '2919 St. Charles Avenue, New Orleans, LA 70115', 
    :web_address => 'https://jerichohousing.org/', 
    :contact_phone => '504-895-6763', 
    :contact_email => 'info@jerichohousing.org',
    :category => 'Build'},
-    #15
+    #16
   {:name => 'Please Foundation',
    :address => 'P.O. Box 9223, Metairie, LA 70055', 
    :web_address => 'https://www.pleasefoundation.org/index.php', 
    :contact_phone => '504-554-0856', 
    :contact_email => 'yvette.pleasefoundation@gmail.com',
    :category => 'Education'},
-    #16
+    #17
   {:name => 'United Way of Southeast Louisiana',
    :address => '2515 Canal Street, New Orleans, LA 70119', 
    :web_address => 'https://www.unitedwaysela.org/', 
    :contact_phone => '504-822-5540', 
    :contact_email => 'info@UnitedWaySELA.org',
    :category => 'Food'},
-    #17
+    #18
   {:name => 'Literacy AmeriCorps New Orleans',
    :address => '6363 St. Charles Avenue, New Orleans LA 70118', 
    :web_address => 'https://my.americorps.gov/mp/listing/viewListing.do?id=33219', 
    :contact_phone => '504-864-7077', 
    :contact_email => 'literacyamericorps@exchange.loyno.edu',
    :category => 'Education'},
-    #18
+    #19
   {:name => 'Code For New Orleans',
    :address => '365 Canal St #3100, New Orleans, LA 70130', 
    :web_address => 'https://codeforneworleans.org/pages/about.html', 
    :contact_phone => '504-227-4438', 
    :contact_email => 'ryan@codeforneworleans.org',
    :category => 'Education'},
-    #19
+    #20
   {:name => 'Ronald McDonald House Charities of South Louisiana',
    :address => '4403 Canal St, New Orleans, LA 70119', 
    :web_address => 'https://rmhc-sla.org/', 
    :contact_phone => '504-486-6668', 
    :contact_email => 'info@rmhc-sla.org',
    :category => 'Health'},
-    #20
+    #21
   {:name => 'Greater New Orleans Foundation',
    :address => '919 St. Charles Avenue, New Orleans, LA 70130', 
    :web_address => 'https://www.gnof.org/', 
@@ -169,49 +169,49 @@ events = [
     :start_time => '08:30',
     :end_time => '11:00',
     :link => 'https://shfbgnoa.volunteerhub.com/eventregistrationwizard/userreview',
-    :organization => organization_objects[0]},
+    :organization_id => 1},
   {:name => 'Community Kitchen',
     :description => 'Volunteers will assist the Second Harvest Community Kitchen to prepare meals, plate meals and help with various other projects as needed. This would include kid\'s meals, senior meals, holiday meals, catering and processing any donated produce.',
     :date => '12/10/2021',
     :start_time => '08:30',
     :end_time => '11:00',
     :link => 'https://shfbgnoa.volunteerhub.com/eventregistrationwizard/userreview',
-    :organization => organization_objects[0]},
+    :organization_id => 1},
   {:name => 'Community Kitchen',
     :description => 'Volunteers will assist the Second Harvest Community Kitchen to prepare meals, plate meals and help with various other projects as needed. This would include kid\'s meals, senior meals, holiday meals, catering and processing any donated produce.',
     :date => '12/17/2021',
     :start_time => '08:30',
     :end_time => '11:00',
     :link => 'https://shfbgnoa.volunteerhub.com/eventregistrationwizard/userreview',
-    :organization => organization_objects[0]},
+    :organization_id => 1},
   {:name => 'Drop-In Farming',
     :description => 'Just show up at the farm ten minutes early with good shoes you don\'t mind getting dirty, a water bottle, snacks, and a hat.',
     :date => '12/07/2021',
     :start_time => '08:30',
     :end_time => '12:30',
     :link => 'https://growdatyouthfarm.org/volunteer',
-    :organization => organization_objects[2]},
+    :organization_id => 3},
   {:name => 'Drop-In Farming',
     :description => 'Just show up at the farm ten minutes early with good shoes you don\'t mind getting dirty, a water bottle, snacks, and a hat.',
     :date => '12/08/2021',
     :start_time => '08:30',
     :end_time => '12:30',
     :link => 'https://growdatyouthfarm.org/volunteer',
-    :organization => organization_objects[2]},
+    :organization_id => 3},
   {:name => 'Drop-In Farming',
     :description => 'Just show up at the farm ten minutes early with good shoes you don\'t mind getting dirty, a water bottle, snacks, and a hat.',
     :date => '12/09/2021',
     :start_time => '08:30',
     :end_time => '12:30',
     :link => 'https://growdatyouthfarm.org/volunteer',
-    :organization => organization_objects[2]},
+    :organization_id => 3},
   {:name => 'Drop-In Farming',
     :description => 'Just show up at the farm ten minutes early with good shoes you don\'t mind getting dirty, a water bottle, snacks, and a hat.',
     :date => '12/10/2021',
     :start_time => '08:30',
     :end_time => '12:30',
     :link => 'https://growdatyouthfarm.org/volunteer',
-    :organization => organization_objects[2]},
+    :organization_id => 3}
 #   {:name => 'Take Paws Rescue',
 #     :description => 'Volunteers pay to play with puppies to raise funding for foster dogs.',
 #     :date => '10/18/2021',

@@ -10,6 +10,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+      @organization = Organization.find(@event.organization_id)
   end
 
   # GET /events/new
