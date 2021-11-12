@@ -58,6 +58,17 @@
     </div>
   </div>
 
+<div class="field row my-2 pt-2" >
+    <div class="col-sm-2">
+      <%= form.label :organization %>
+      <font color ="red">*</font>
+    </div>
+    <div class="col-sm-10">
+      <%= form.collection_select :organization_id, Organization.order(:name),:id,:name,include_blank: true %>
+    </div>
+</div>
+
+
   <div class="field row my-2 pt-2" >
     <div class="col-sm-2">
       <%= form.label :link %>
