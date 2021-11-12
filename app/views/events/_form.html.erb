@@ -64,7 +64,7 @@
       <font color ="red">*</font>
     </div>
     <div class="col-sm-10">
-      <%= form.collection_select :organization_id, Organization.order(:name),:id,:name,include_blank: true %>
+      <%= form.collection_select :organization_id, Organization.all, :id, :name %>
     </div>
 </div>
 
