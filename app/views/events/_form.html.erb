@@ -12,75 +12,75 @@
   <% end %>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :name %>
       <font color ="red">*</font>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.text_field :name %>
     </div>
   </div>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :description %>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.text_area :description, :size => "30x5" %>
     </div>
   </div>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :date %>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%=form.date_field :date %>
     </div>
   </div>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :start_time %>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.time_field :start_time %>
     </div>
   </div>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :end_time %>
 
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.time_field :end_time %>
     </div>
   </div>
 
 <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :organization %>
       <font color ="red">*</font>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.collection_select :organization_id, Organization.all, :id, :name %>
     </div>
 </div>
 
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       <%= form.label :link %>
       <font color ="red">*</font>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-8">
       <%= form.text_field :link %>
     </div>
   </div>
 
   <div class="field row my-2 pt-2" >
-    <div class="col-sm-2">
+    <div class="col-sm-4">
       
       <%= form.submit class: "btn btn-lg btn-primary" %>
     </div>
