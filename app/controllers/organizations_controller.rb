@@ -3,8 +3,9 @@ class OrganizationsController < ApplicationController
 
   # GET /organizations
   # GET /organizations.json
+    
   def index
-    @organizations = Organization.all
+    @organizations = Organization.order(params[:sort])
   end
     
   def search
@@ -16,6 +17,7 @@ class OrganizationsController < ApplicationController
         @matchEvents = Event.all.where("lower(name) LIKE ?", "%#{@parameter}%")
     end
   end
+    
 
   # GET /organizations/1
   # GET /organizations/1.json
