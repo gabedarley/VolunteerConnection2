@@ -5,7 +5,7 @@ gem 'cancancan', '~> 1.10'
 gem 'rolify'
 
 gem 'omniauth-facebook'
-gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.3'
