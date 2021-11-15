@@ -51,12 +51,15 @@
       </button>
         
       <button type="button" class="btn">
-          <a class="nav-item"><%= link_to "Profile", edit_user_registration_path %></a>
+          <a class="nav-item"><%= link_to "Profile", users_show_path %></a>
       </button>
         
       <button type="button" class="btn">
           <a class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete %></a>
-      </button>  
+      </button>
+        
+        
+
     </div>
   </div>
 </nav>
