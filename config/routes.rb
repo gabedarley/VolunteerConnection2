@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'home/index', to: 'static_pages#home', as: 'home'
 #   get ‘auth/:provider/callback’, to: ‘sessions#googleAuth’
 #   get ‘auth/failure’, to: redirect(‘/’)
-  get "/auth/google_oauth2/callback" => 'sessions#google'
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end

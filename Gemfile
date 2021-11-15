@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rolify'
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.3'
