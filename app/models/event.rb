@@ -6,4 +6,9 @@ class Event < ActiveRecord::Base
   validates :end_time, :format => { :with => /\A([0-1]?[0-9]|2[0-3]):[0-5][0-9]\z|\A\z/}
     
   belongs_to :organization
+  
+  def self.search(search)
+      where("lower(organizations.name) LIKE :search OR lower(events.name)
+      LIKE: search", search: "%#{search.downcase}%").uniq
+  end
 end

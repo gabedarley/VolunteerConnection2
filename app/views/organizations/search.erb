@@ -1,0 +1,13 @@
+<h3>Search Results of Organizations:</h3>
+
+<% @matchOrganizations.each do |organization|%>
+    <%= link_to organization.name, organization_path(organization.id) %> <br>
+<% end %>
+
+<hr>
+<h3>Search Results of Events:</h3>
+<% @matchEvents.each do |event|%>
+    <%= link_to event.name, event_path(event.id) %> <br>
+<% end%>
+
+

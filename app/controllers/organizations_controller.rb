@@ -6,6 +6,16 @@ class OrganizationsController < ApplicationController
   def index
     @organizations = Organization.all
   end
+    
+  def search
+    if params[:search].blank?
+      redirect_to organizations_path and return
+    else
+        @parameter = params[:search].downcase
+        @matchOrganizations = Organization.all.where("lower(name) LIKE ?", "%#{@parameter}%")
+        @matchEvents = Event.all.where("lower(name) LIKE ?", "%#{@parameter}%")
+    end
+  end
 
   # GET /organizations/1
   # GET /organizations/1.json
@@ -71,4 +81,5 @@ class OrganizationsController < ApplicationController
     def organization_params
       params.require(:organization).permit(:name, :address, :web_address, :contact_phone, :contact_email, :category)
     end
+    
 end
