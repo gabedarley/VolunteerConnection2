@@ -49,7 +49,7 @@ group :development do
 end
 
 group :production do
-  #gem 'pg', '~> 0.21'
+  gem 'pg', '~> 0.21'
 end
 
 gem 'bcrypt', '~> 3.1.7'
