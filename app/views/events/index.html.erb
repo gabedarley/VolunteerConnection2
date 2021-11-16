@@ -21,6 +21,10 @@
   </thead>
 
   <tbody>
+    <div class = "container pb-5">
+        <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end" %>
+    </div>  
+
     <% @events.each do |event| %>
       <tr>
         <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %></td>
@@ -37,5 +41,5 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path, class:"btn btn-secondary" %>
+
 </div>
