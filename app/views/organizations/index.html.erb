@@ -19,6 +19,9 @@
   </thead>
 
   <tbody>
+    <div class = "container pb-5">
+        <%= link_to 'New Organization', new_organization_path, class:"btn btn-secondary float-end" %>
+    </div>
     <% @organizations.each do |organization| %>
       <tr>
         <td><%= link_to "#{organization.name}", "#{organization.web_address}",:target => '_blank', style: 'color:#0080ff;', class: 'css_class' %></td>
@@ -34,6 +37,6 @@
 
 <br>
 
-<%= link_to 'New Organization', new_organization_path, class:"btn btn-secondary" %>
+
     
 </div>
