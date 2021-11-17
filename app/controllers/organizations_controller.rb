@@ -1,6 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only: [:show, :edit, :update, :destroy]
-
+  rescue_from ActionController::RedirectBackError, with: :redirect_to_default
   # GET /organizations
   # GET /organizations.json
     
@@ -10,7 +10,7 @@ class OrganizationsController < ApplicationController
     
   def search
     if params[:search].blank?
-      redirect_to organizations_path and return
+      redirect_to :back and return
     else
         @parameter = params[:search].downcase
         @matchOrganizations = Organization.all.where("lower(name) LIKE ?", "%#{@parameter}%")
@@ -83,5 +83,10 @@ class OrganizationsController < ApplicationController
     def organization_params
       params.require(:organization).permit(:name, :address, :web_address, :contact_phone, :contact_email, :category)
     end
+   
+    def redirect_to_default
+        redirect_to root_path
+    end
+
     
 end
