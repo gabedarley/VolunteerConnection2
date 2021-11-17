@@ -5,4 +5,6 @@ class Organization < ActiveRecord::Base
     validates :contact_email, :format => { :with => /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+|\A\z/}
 
     has_many :events, dependent: :destroy
+    has_and_belongs_to_many :users
+    
 end

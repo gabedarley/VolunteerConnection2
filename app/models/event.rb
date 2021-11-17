@@ -9,6 +9,7 @@ class Event < ActiveRecord::Base
 
   validates :organization, :presence => true
 
+  has_and_belongs_to_many :users
   
   def self.search(search)
       where("lower(organizations.name) LIKE :search OR lower(events.name)
