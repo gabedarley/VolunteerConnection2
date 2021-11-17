@@ -6,6 +6,8 @@ class Event < ActiveRecord::Base
   validates :end_time, :format => { :with => /\A([0-1]?[0-9]|2[0-3]):[0-5][0-9]\z|\A\z/}
     
   belongs_to :organization
+    
+  has_and_belongs_to_many :users
 
   validates :organization, :presence => true
 
