@@ -23,19 +23,41 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %></td>
+        <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', style: 'color:rgb(0,0,0);', class: 'css_class'  %></td>
         <td><%= event.date %></td>
         <td><%= event.start_time %></td>
         <td><%= event.end_time %></td>
         <td><%= link_to 'Show', event, class:"btn btn-secondary btn-sm" %></td>
-        <td><%= link_to 'Edit', edit_event_path(event), class:"btn btn-secondary btn-sm" %></td>
-        <td><%= button_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-sm" %></td>
+        <td><%= link_to image_tag("icons8-pencil-24.png", size:"20"), edit_event_path(event), class:"btn btn-secondary btn-sm" %></td>
+        <td><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+   
+<style>
+    tr {
+    background-color:#02b300;
+    color:white; }
+    
+  .button {
+  background-color: lightblue; 
+  border: solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    
+}
+    
+</style>
 
 <br>
+    
 
-<%= link_to 'New Event', new_event_path, class:"btn btn-secondary" %>
+
+<%= link_to 'New Event', new_event_path, class:"button" %>
 </div>
