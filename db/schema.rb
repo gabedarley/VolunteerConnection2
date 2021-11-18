@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211117041843) do
+ActiveRecord::Schema.define(version: 20211118075954) do
 
   create_table "Events_Users", id: false, force: :cascade do |t|
     t.integer "event_id", null: false
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20211117041843) do
     t.string "contact_phone"
     t.string "contact_email"
     t.string "category"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|
