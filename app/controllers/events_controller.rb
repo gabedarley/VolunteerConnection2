@@ -63,8 +63,15 @@ class EventsController < ApplicationController
   end
   
   def add
-      current_user.events << @event
-      redirect_to event_path(@event)
+      
+#       redirect_to event_path(@event)
+      
+      respond_to do |format|
+          if current_user.events << @event
+            format.html { redirect_to @event, notice: 'Event was successfully added.' }
+            format.json { render :show, status: :ok, location: @event }
+          end
+      end
   end
 
   private

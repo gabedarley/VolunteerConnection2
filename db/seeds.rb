@@ -12,7 +12,8 @@ organizations = [
     :web_address => 'https://no-hunger.org/', 
     :contact_phone => '504-734-1322', 
     :contact_email => 'help@secondharvest.org', 
-    :category => 'Food'}, 
+    :category => 'Food',
+    :image => 'second_harvest.jfif'}, 
     #2
   {:name => 'NOLA Tree Project',
     :address => '5701 Canal Blvd, New Orleans, LA 70124', 
@@ -26,7 +27,8 @@ organizations = [
     :web_address => 'https://growdatyouthfarm.org/',
     :contact_phone => '504-300-1132', 
     :contact_email => 'info@growdatyouthfarm.org',
-    :category => 'Garden'},
+    :category => 'Garden',
+    :image => 'grow_dat.jfif'},
     #4
   {:name => 'Take Paws Rescue',
     :address => '2730 Banks St, New Orleans, LA 70119',

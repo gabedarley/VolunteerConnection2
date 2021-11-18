@@ -33,6 +33,13 @@
         <td><%= event.end_time %></td>
         <td><%= link_to image_tag("eye.jfif", size: "30"), event%></td>
         <td><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></td>
+        <% if signed_in? %>
+            <% if event.added?(current_user) %>
+                <td><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %></td>
+            <% else %>
+                <td><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5" %></td>
+            <% end %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

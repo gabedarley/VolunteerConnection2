@@ -15,5 +15,9 @@ class Event < ActiveRecord::Base
       where("lower(organizations.name) LIKE :search OR lower(events.name)
       LIKE: search", search: "%#{search.downcase}%").uniq
   end
+    
+  def added?(user)
+      !!user.events.find{|ex_event| ex_event.id == self.id}
+  end
 
 end
