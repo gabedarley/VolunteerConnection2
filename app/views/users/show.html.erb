@@ -18,17 +18,21 @@
     
 <div class="container mt-3 p-5 my-5">
     <h1>Registered Events</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
     
-    <% @user.events.each do |event| %>
-    <div class="card" style="width:400px">
-      <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces", width:"400px", crop:"pad" =%>
-      <div class="card-body">
-        <h4 class="card-title"> <%= event.name %> </h4>
-        <p class="card-text"> <%= event.date %> </p>
-        <p class="card-text"> <strong> Start: </strong> <%= event.start_time %> </p>
-        <p class="card-text"> <strong> End: </strong> <%= event.end_time %> </p>
-      </div>
+        <% @user.events.each do |event| %>
+        <div class="col">  
+        <div class="card" style="width:400px">
+          <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces", width:"400px", crop:"pad" =%>
+          <div class="card-body">
+            <h4 class="card-title"> <%= event.name %> </h4>
+            <p class="card-text"> <%= event.date %> </p>
+            <p class="card-text"> <strong> Start: </strong> <%= event.start_time %> </p>
+            <p class="card-text"> <strong> End: </strong> <%= event.end_time %> </p>
+          </div>
+        </div>
+        </div>
+        <% end %>
     </div>
-    <% end %>
     
 </div>
