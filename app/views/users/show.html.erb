@@ -23,7 +23,7 @@
         <% @user.events.each do |event| %>
         <div class="col">  
         <div class="card" style="width:400px">
-          <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces", width:"400px", crop:"pad" =%>
+          <%= image_tag "#{event.organization.image}", alt: "Homepage logo with two smiling faces", width:"400px", height:"200px", crop:"pad" =%>
           <div class="card-body">
             <h4 class="card-title"> <%= event.name %> </h4>
             <p class="card-text"> <%= event.date %> </p>

@@ -1,10 +1,10 @@
 <div class="container p-5 my-5 bg-light text-dark">
 
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+
+<h1><%= @event.name %></h1>
+  
+
 
 <p>
   <strong>Date:</strong>
@@ -33,12 +33,12 @@
 
 <% if signed_in? %>
     <% if @event.added?(current_user) %>
-        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm", disabled: true %>
+        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %>
     <% else %>
-        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm" %>
+        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5" %>
     <% end %>
 <% end %>
-    
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 
