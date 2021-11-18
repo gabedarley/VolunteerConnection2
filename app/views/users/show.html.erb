@@ -21,10 +21,12 @@
     
     <% @user.events.each do |event| %>
     <div class="card" style="width:400px">
-      <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces" =%>
+      <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces", width:"400px", crop:"pad" =%>
       <div class="card-body">
         <h4 class="card-title"> <%= event.name %> </h4>
-        <p class="card-text">Some example text.</p>
+        <p class="card-text"> <%= event.date %> </p>
+        <p class="card-text"> <strong> Start: </strong> <%= event.start_time %> </p>
+        <p class="card-text"> <strong> End: </strong> <%= event.end_time %> </p>
       </div>
     </div>
     <% end %>
