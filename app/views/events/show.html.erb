@@ -31,6 +31,10 @@
   <%= link_to "#{@event.name}", "#{@event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
 </p>
 
+<% if signed_in? %>
+<%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm"%>
+<% end %>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 </div>

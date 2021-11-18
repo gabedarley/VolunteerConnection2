@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :add]
     
   # GET /events
   # GET /events.json
@@ -61,6 +61,11 @@ class EventsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def add
+      current_user.events << @event
+      redirect_to event_path(@event)
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -72,4 +77,5 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:name, :date, :start_time, :end_time, :link, :organization_id)
     end
+    
 end
