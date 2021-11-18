@@ -32,9 +32,13 @@
 </p>
 
 <% if signed_in? %>
-<%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm"%>
-
+    <% if @event.added?(current_user) %>
+        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm", disabled: true %>
+    <% else %>
+        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm" %>
+    <% end %>
 <% end %>
+    
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 
