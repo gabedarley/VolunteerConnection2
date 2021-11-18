@@ -420,6 +420,7 @@ users = [
 ]
     
 users.each do |user|
-    User.create!(user)
+    newUser = User.create!(user)
+    newUser.events << Event.find(1)
 end
 
