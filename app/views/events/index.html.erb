@@ -31,9 +31,8 @@
         <td><%= event.date %></td>
         <td><%= event.start_time %></td>
         <td><%= event.end_time %></td>
-        <td><%= link_to 'Show', event, class:"btn btn-secondary btn-sm" %></td>
-        <td><%= link_to 'Edit', edit_event_path(event), class:"btn btn-secondary btn-sm" %></td>
-        <td><%= button_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-sm" %></td>
+        <td><%= link_to image_tag("eye.jfif", size: "30"), event%></td>
+        <td><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></td>
       </tr>
     <% end %>
   </tbody>

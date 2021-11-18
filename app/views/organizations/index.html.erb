@@ -27,9 +27,8 @@
         <td><%= link_to "#{organization.name}", "#{organization.web_address}",:target => '_blank', style: 'color:#0080ff;', class: 'css_class' %></td>
         <td><%= organization.category %></td> 
 
-        <td><%= link_to 'Show', organization, class:"btn btn-secondary btn-sm"  %></td>
-        <td><%= link_to 'Edit', edit_organization_path(organization), class:"btn btn-secondary btn-sm"  %></td>
-        <td><%= button_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-sm"  %></td>
+        <td><%= link_to image_tag("eye.jfif", size: "30"), organization%></td>
+        <td><%= link_to image_tag("pencil.jfif", size: "30"), edit_organization_path(organization)%></td>
       </tr>
     <% end %>
   </tbody>
