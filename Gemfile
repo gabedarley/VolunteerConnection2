@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rolify'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
