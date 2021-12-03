@@ -8,7 +8,7 @@
 <div class="container mt-3 p-5 my-5">
 <h1>Organizations</h1>
 
-<table class="table">
+<!-- <table class="table">
   <thead class="table-secondary">
     <tr>
       <th><%= link_to "Name", :sort => "name"%></th>
@@ -34,7 +34,23 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+        <% @organizations.each do |organization| %>
+        <div class="col">  
+        <div class="card" style="width:400px">
+          <%= image_tag "#{organization.image}", alt: "Photo of #{organization}", width:"400px", height:"200px", crop:"pad" =%>
+          <div class="card-body">
+            <h4 class="card-title"> <%= organization.name %> </h4>
+            <p class="card-text"> <%= organization.category %> <td><%= link_to image_tag("eye.jfif", size: "30"), organization%></td> </p>
+          </div>
+        </div>
+        </div>
+        <% end %>
+    </div>
+    
 
 
     
