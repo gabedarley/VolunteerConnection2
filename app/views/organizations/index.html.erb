@@ -40,7 +40,8 @@
     
         <% @organizations.each do |organization| %>
         <div class="col">  
-        <div class="card" style="width:400px">
+        <div class="card h-100" style="width:400px">
+          <h5 class="card-header"> <%= organization.name %> </h5>
           <%= image_tag "#{organization.image}", alt: "Photo of #{organization}", width:"400px", height:"200px", crop:"pad" =%>
           <div class="card-body">
             <h4 class="card-title"> <%= organization.name %> </h4>
