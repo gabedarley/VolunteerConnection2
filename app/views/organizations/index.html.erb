@@ -8,41 +8,13 @@
 <div class="container mt-3 p-5 my-5">
 <h1>Organizations</h1>
 
-<!-- <table class="table">
-  <thead class="table-secondary">
-    <tr>
-      <th><%= link_to "Name", :sort => "name"%></th>
-      <th><%= link_to "Organization Type", :sort => "category"%></th>
-      
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <div class = "container pb-5">
-        <%= link_to 'New Organization', new_organization_path, class:"btn btn-secondary float-end" %>
-    </div>
-    <% @organizations.each do |organization| %>
-      <tr>
-        <td><%= link_to "#{organization.name}", "#{organization.web_address}",:target => '_blank', style: 'color:#0080ff;', class: 'css_class' %></td>
-        <td><%= organization.category %></td> 
-
-        <td><%= link_to image_tag("eye.jfif", size: "30"), organization%></td>
-        <td><%= link_to image_tag("pencil.jfif", size: "30"), edit_organization_path(organization)%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br> -->
-
     <div class="row row-cols-1 row-cols-md-3 g-4">
     
         <% @organizations.each do |organization| %>
         <div class="col">  
-        <div class="card h-100" style="width:400px">
+        <div class="card h-100">
           <h5 class="card-header"> <%= organization.name %> </h5>
-          <%= image_tag "#{organization.image}", alt: "Photo of #{organization}", width:"400px", height:"200px", crop:"pad" =%>
+          <%= image_tag "#{organization.image}", alt: "Photo of #{organization}", height:"200px", crop:"pad" =%>
           <div class="card-body">
             <h4 class="card-title"> <%= organization.name %> </h4>
             <p class="card-text"> <%= organization.category %> <td><%= link_to image_tag("eye.jfif", size: "30"), organization%></td> </p>
