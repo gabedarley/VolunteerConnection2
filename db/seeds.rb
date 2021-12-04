@@ -62,13 +62,6 @@ organizations = [
    :contact_email => 'info@cajunnavyrelief.com',
    :category => 'Relief',
    :image => 'cajunnavy.jpg' },
-    #8
-  {:name => 'Heart N Hands',
-   :address => '4460 Saint Bernard Ave, New Orleans, LA 70122',
-   :web_address => 'https://www.heartnhands.org/',
-   :contact_phone => '800-276-8082',
-   :contact_email => 'info@heartnhands.org',
-   :category => 'Health'},
     #9
   {:name => 'Edible Schoolyard',
    :address => '300 N Broad St, New Orleans, LA 70119',
@@ -101,13 +94,6 @@ organizations = [
    :contact_email => 'volunteer@greenlightneworleans.org',
    :category => 'Build',
    :image => 'greenlight.jpg'},
-    #13
-  {:name => 'Dragon Cafe',
-   :address => '4600 St. Charles Avenue New Orleans, LA 70115', 
-   :web_address => 'http://stgeorge-nola.org/dragon/', 
-   :contact_phone => '504-899-2811', 
-   :contact_email => 'info@stgeorge-nola.org',
-   :category => 'Food'},
     #14
   {:name => 'Grace at the Greenlight',
    :address => '1528 Oretha Castle Haley Blvd, New Orleans, LA 70130', 
@@ -132,13 +118,6 @@ organizations = [
    :contact_email => 'yvette.pleasefoundation@gmail.com',
    :category => 'Education',
    :image => 'pleasefound.jpg'},
-    #17
-  {:name => 'United Way of Southeast Louisiana',
-   :address => '2515 Canal Street, New Orleans, LA 70119', 
-   :web_address => 'https://www.unitedwaysela.org/', 
-   :contact_phone => '504-822-5540', 
-   :contact_email => 'info@UnitedWaySELA.org',
-   :category => 'Food'},
     #18
   {:name => 'Literacy AmeriCorps New Orleans',
    :address => '6363 St. Charles Avenue, New Orleans LA 70118', 
