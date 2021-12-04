@@ -16,9 +16,14 @@
     </button>
 </div>
 
-<div class="container bg-secondary mt-3 p-5 my-5">
-    <%= month_calendar do |date| %>
-      <%= date %>
+<div class="container bg-light mt-3 p-5 my-5">
+    <%= month_calendar(events: @user.events, attribute: :calDate) do |date, meetings| %>
+      <%= date.day %>
+    <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+    </div>
+  <% end %>
     <% end %>
 </div>
     
