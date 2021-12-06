@@ -11,6 +11,7 @@ gem "simple_calendar", "~> 2.4"
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
+gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.3'
 # Use sqlite3 as the database for Active Record

@@ -8,7 +8,7 @@
 organizations = [
     #1
   {:name => 'Second Harvest', 
-    :address => '700 Edwards Ave, New Orleans, LA 70123', 
+    :address => '700 Edwards Ave, Elmwood, LA 70123', 
     :web_address => 'https://no-hunger.org/', 
     :contact_phone => '504-734-1322', 
     :contact_email => 'help@secondharvest.org', 

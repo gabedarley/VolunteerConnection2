@@ -6,12 +6,14 @@
       <link rel="stylesheet" type="text/css" href="custom.css">
   </head>
 <body>
-
+    
 
 <center class = "container p-5">
     <%= image_tag "vc.png", alt: "Homepage logo with two smiling faces" =%>
 
 </center>
+
+
 
 <div class="container p-5 my-5 bg-light text-dark">
   
@@ -24,11 +26,46 @@
         <%= link_to 'Events', events_path, class:"btn btn-secondary" %>
  
   </div>
-
-  
 </div>
-<div class="container" style="min-height:100vh">
+<h1 class="text-center">Volunteering in Action!</h1>   
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <%= image_tag "codenola.jfif", alt: "Homepage logo with two smiling faces",style: 'max-height: 32rem;' =%>
+        </div>
     </div>
+    <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <%= image_tag "grow_dat.jfif", alt: "Homepage logo with two smiling faces",style: 'max-height: 32rem;' =%>
+        </div>     
+    </div>
+    <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <%= image_tag "greenlight.jpg", alt: "Homepage logo with two smiling faces",style: 'max-height: 32rem;' =%>
+        </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>  
+
   
 </body>
 </html>

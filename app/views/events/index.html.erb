@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-    <title>Events</title>    
-    </head>
+    <title>Events</title>
+  </head>
 
 
-
-<div class="container mt-3 p-5 my-5">
+<div class="container mt-3 p-1 my-5">
 <h1>Events</h1>
-
-<table class="table">
-  <thead class="table-secondary">
-    <tr>
-      <th><%= link_to "Name", :sort => "name"%></th>
-      <th><%= link_to "Date", :sort => "date"%></th>
-      <th><%= link_to "Start time", :sort => "start_time"%></th>
-      <th><%= link_to "End time", :sort => "end_time"%></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <div class = "container pb-5">
-        <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end" %>
-    </div>  
-
+    
     <% @events.each do |event| %>
-      <tr>
-        <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %></td>
-        <td><%= event.date %></td>
-        <td><%= event.start_time %></td>
-        <td><%= event.end_time %></td>
-        <td><%= link_to image_tag("eye.jfif", size: "30"), event%></td>
-        <td><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></td>
-        <% if signed_in? %>
-            <% if event.added?(current_user) %>
-                <td><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %></td>
+       <div class="card mb-3" style="max-width: 1500px;">
+      <h5 class="card-header"> <%= event.name %> </h5>
+      <div class="row g-0 align-items-start">
+        <div class="col">
+              <%= image_tag "#{event.organization.image}", alt: "Photo of #{event.organization}", class:"img-responsive", width:"300px", height:"200px", crop:"pad" =%>
+           
+          </div>
+        <div class="col-2">
+          <div class="card-body">
+              
+                <p class="card-text"> <b>Date:</b> <%= event.date %> </p>
+                <p class="card-text"> <b>Start time:</b> <%= event.start_time %> </p>
+                <p class="card-text"> <b>End time:</b> <%= event.end_time %> </p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card-body">
+                <p class="card-text"> <%= event.description %></p>
+                
+          </div>
+        </div>
+        <div class="col me-auto">
+            <%= link_to image_tag("eye.jfif", size: "30"), event%>
+            <p><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></p>
+             <% if signed_in? %>
+             <% if event.added?(current_user) %>
+                <%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %></p>
             <% else %>
-                <td><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5" %></td>
+                <%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5" %></p>
             <% end %>
         <% end %>
-      </tr>
+          </div>
+
+
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
-
-
-</div>
+    <div class = "container pb-5">
+        <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end" %>
+    </div> 
