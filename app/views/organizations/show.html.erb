@@ -43,7 +43,7 @@
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
   </div>
-    <h2>My Map</h2>
+    <h2 class = "text-center">Find your way there!</h2>
     <div id="map" class="map"></div>
     <script type="text/javascript">
 
@@ -64,13 +64,15 @@
        var layer = new ol.layer.Vector({
      source: new ol.source.Vector({
          features: [
-             new ol.Feature({
+             dot = new ol.Feature({
                  geometry: new ol.geom.Point(ol.proj.fromLonLat([results[1],results[0]]))
              })
          ]
      })
 
  });
+        
+
 
  map.addLayer(layer);
     </script>
