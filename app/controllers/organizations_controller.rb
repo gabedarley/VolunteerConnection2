@@ -7,7 +7,7 @@ class OrganizationsController < ApplicationController
   def index
     @organizations = Organization.order(params[:sort])
   end
-    
+  
   def search
     if params[:search].blank?
       redirect_to :back and return

@@ -1,9 +1,18 @@
-
-
+<!doctype html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
     <title>Organization Info</title>
   </head>
-
+<body>
 <div class="container p-5 my-5 bg-light text-dark">
 <h1><%= @organization.name %></h1>
 <p>
@@ -33,4 +42,33 @@
 
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
+
   </div>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([ -90.125322, 29.945127]),
+          zoom: 17
+        })
+      });
+       var layer = new ol.layer.Vector({
+     source: new ol.source.Vector({
+         features: [
+             new ol.Feature({
+                 geometry: new ol.geom.Point(ol.proj.fromLonLat([ -90.125322, 29.945127]))
+             })
+         ]
+     })
+ });
+ map.addLayer(layer);
+    </script>
+</body>
+</html>
