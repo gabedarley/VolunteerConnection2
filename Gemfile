@@ -4,6 +4,9 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 gem 'rolify'
 gem 'rails_12factor', group: :production
+gem "simple_calendar", "~> 2.4"
+
+
 
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
