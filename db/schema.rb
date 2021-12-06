@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20211204224014) do
+ActiveRecord::Schema.define(version: 20211206205753) do
 
   create_table "Organizations_Users", id: false, force: :cascade do |t|
     t.integer "organization_id", null: false
@@ -25,11 +25,10 @@ ActiveRecord::Schema.define(version: 20211204224014) do
     t.string   "name"
     t.string   "description"
     t.string   "date"
-    t.string   "start_time"
-    t.string   "end_time"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "link"
     t.integer  "organization_id"
-    t.datetime "calDate"
   end
 
   create_table "events_users", id: false, force: :cascade do |t|
