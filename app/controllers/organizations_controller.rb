@@ -8,6 +8,12 @@ class OrganizationsController < ApplicationController
     @organizations = Organization.order(params[:sort])
   end
     
+  def results(address)
+	results = Geocoder.search("#{address}")
+	return results.first.coordinates
+  end
+  helper_method :results
+    
   def search
     if params[:search].blank?
       redirect_to :back and return
