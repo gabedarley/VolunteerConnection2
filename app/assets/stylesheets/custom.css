@@ -107,3 +107,20 @@ table {
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
+.background-image {
+   opacity: 0.5;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: -1;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: fixed;
+ }
+
+.white-text{
+    color: #fff
+}
