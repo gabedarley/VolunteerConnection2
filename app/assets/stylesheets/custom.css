@@ -1,12 +1,13 @@
 .btn-primary {
     color: #fff;
     text-decoration-color: #FFFFFF;
-    background-color: #1E96FC;
-    border-color: #1E96FC
+    background-color: #1d96fc;
+    border-color: #1d96fc
 }
 
 .btn-secondary {
     color: #fff;
-    background-color: #FF0054;
-    border-color: #FF0054
+    background-color: #f45291;
+    border-color: #f45291
+
 }
