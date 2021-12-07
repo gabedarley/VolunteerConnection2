@@ -47,16 +47,19 @@ table {
     border-color: #ff0054!important
 }
 
+.cal-meeting {
+    border-color: #ff0054!important;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
 #organizations-text {
     color: #1d96fc
 }
 
 #events-text {
     color: #ff0054
-}
-
-#fun-link {
-    color: #1d96fc
 }
 
 .flip-card {

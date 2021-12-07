@@ -21,7 +21,7 @@
     <%= month_calendar(events: @user.events) do |date, meetings| %>
       <%= date.day %>
     <% meetings.each do |meeting| %>
-    <div class="container bg-secondary">
+    <div class="container bg-secondary cal-meeting">
       <%= meeting.name %>
     </div>
   <% end %>
@@ -29,7 +29,7 @@
 </div>
     
     
-<div class="container bg-secondary mt-3 p-5 my-5">
+<div class="container bg-primary mt-3 p-5 my-5">
     <h1 style="color:white">Registered Events</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
     
