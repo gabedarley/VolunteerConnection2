@@ -5,7 +5,7 @@ class ChangeStartTimeToDateTimeInEvents < ActiveRecord::Migration
     
     # add the the current start_time as datetime to the temporary column for each entry
     Event.all.each do |event|
-      event.update(start_time_datetime: assignment.start_time.to_datetime)
+      event.update(start_time_datetime: event.start_time.to_datetime)
     end
 
     # drop the old time column
