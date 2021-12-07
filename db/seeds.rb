@@ -79,7 +79,7 @@ organizations = [
    :category => 'Advocacy',
    :image => 'nola4.jfif'},
     #11
-  {:name => 'Planned Parenthood New Orleans',
+  {:name => 'Planned Parenthood',
    :address => '4636 S Claiborne Ave Ste 100, New Orleans, LA 70125',
    :web_address => 'https://www.plannedparenthood.org/health-center/louisiana/new-orleans/70125/new-orleans-health-center-3961-91650',
    :contact_phone => '504-897-9200',
@@ -119,7 +119,7 @@ organizations = [
    :category => 'Education',
    :image => 'pleasefound.jpg'},
     #18
-  {:name => 'Literacy AmeriCorps New Orleans',
+  {:name => 'Literacy AmeriCorps',
    :address => '6363 St. Charles Avenue, New Orleans LA 70118', 
    :web_address => 'https://my.americorps.gov/mp/listing/viewListing.do?id=33219', 
    :contact_phone => '504-864-7077', 
@@ -135,7 +135,7 @@ organizations = [
    :category => 'Education',
    :image => 'codenola.jfif'},
     #20
-  {:name => 'Ronald McDonald House Charities of South Louisiana',
+  {:name => 'Ronald McDonald House',
    :address => '4403 Canal St, New Orleans, LA 70119', 
    :web_address => 'https://rmhc-sla.org/', 
    :contact_phone => '504-486-6668', 
