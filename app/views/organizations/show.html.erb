@@ -12,37 +12,77 @@
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
     <title>Organization Info</title>
   </head>
+    
+    
 <body>
-<div class="container p-5 my-5 bg-light text-dark">
-<h1><%= @organization.name %></h1>
-<p>
-  <strong>Address:</strong>
-  <%= @organization.address %>
-</p>
+    
+        <div class="container p-5 my-5 bg-light text-dark">
+        <div class="row">
+            <div class="col-5">
+            <h1><%= @organization.name %></h1>
+            <p>
+              <strong>Address:</strong>
+              <%= @organization.address %>
+            </p>
 
-<p>
-  <strong>Web Address:</strong>
-  <%= link_to "Explore #{@organization.name}", "#{@organization.web_address}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
-</p>
+            <p>
+              <strong>Web Address:</strong>
+              <%= link_to "Explore #{@organization.name}", "#{@organization.web_address}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
+            </p>
 
-<p>
-  <strong>Primary Contact Phone:</strong>
-  <%= @organization.contact_phone %>
-</p>
+            <p>
+              <strong>Primary Contact Phone:</strong>
+              <%= @organization.contact_phone %>
+            </p>
 
-<p>
-  <strong>Primary Contact Email:</strong>
-  <%= @organization.contact_email %>
-</p>
+            <p>
+              <strong>Primary Contact Email:</strong>
+              <%= @organization.contact_email %>
+            </p>
 
-<p>
-  <strong>Organization Type:</strong>
-  <%= @organization.category %>
-</p>
+            <p>
+              <strong>Organization Type:</strong>
+              <%= @organization.category %>
+            </p>
 
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
-  </div>
+            <p>
+            <%= link_to 'Edit', edit_organization_path(@organization) %> |
+            <%= link_to 'Back', organizations_path %>
+            </p>
+            </div>
+            
+            <div class="col-7">
+                <div class="container p-3 bg-white border border-secondary">
+                 
+                <h3 id="events-text">Events</h3>
+                <table class="table">
+                  <thead class="table-secondary">
+                    <tr>
+                      <th><%= link_to "Name", :sort => "name"%></th>
+                      <th><%= link_to "Date", :sort => "date"%></th>
+                      <th><%= link_to "Start time", :sort => "start_time"%></th>
+                      <th><%= link_to "End time", :sort => "end_time"%></th>
+                      <th colspan="1"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                    <% @organization.events.each do |event| %>
+                      <tr>
+                        <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', class: "nav-item-secondary"  %></td>
+                        <td><%= event.date %></td>
+                        <td><%= event.start_time.strftime("%I:%M%p") %></td>
+                        <td><%= event.end_time.strftime("%I:%M%p") %></td>
+                        <td><%= link_to 'More Details', event, class:"btn btn-secondary btn-sm" %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>   
+                </div>
+            </div>
+        </div>
+        </div>
     <h2 class = "text-center">Find your way there!</h2>
     <div class = "container p-5 my-5">
         <div id="map" class="map"></div>
