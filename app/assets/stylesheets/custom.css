@@ -13,8 +13,8 @@
 
 .btn-secondary {
     color: #fff;
-    background-color: #f45291;
-    border-color: #f45291
+    background-color: #ff0054;
+    border-color: #ff0054
 
 }
 
@@ -22,11 +22,35 @@
     
     color: #fff;
     filter: brightness(0.9);
-    background-color: #f45291;
-    border-color: #f45291
+    background-color: #ff0054;
+    border-color: #ff0054
     
 }
 
 table {
     table-layout : fixed;
+}
+
+.bg-primary {
+    background-color: #1d96fc!important
+}
+
+.bg-secondary {
+    background-color: #ff0054!important
+}
+
+.border-primary {
+    border-color: #1d96fc!important
+}
+
+.border-secondary {
+    border-color: #ff0054!important
+}
+
+#organizations-text {
+    color: #1d96fc
+}
+
+#events-text {
+    color: #ff0054
 }
