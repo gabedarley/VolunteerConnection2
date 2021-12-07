@@ -30,3 +30,27 @@
 table {
     table-layout : fixed;
 }
+
+.bg-primary {
+    background-color: #1d96fc!important
+}
+
+.bg-secondary {
+    background-color: #ff0054!important
+}
+
+.border-primary {
+    border-color: #1d96fc!important
+}
+
+.border-secondary {
+    border-color: #ff0054!important
+}
+
+#organizations-text {
+    color: #1d96fc
+}
+
+#events-text {
+    color: #ff0054
+}

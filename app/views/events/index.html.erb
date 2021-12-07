@@ -10,7 +10,7 @@
     
         <div class="row">
         <div class="col">
-            <h1>Events</h1>
+            <h1 id="events-text">Events</h1>
             </div>    
         <div class="col">
             <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end ml-auto" %>
@@ -19,7 +19,7 @@
         </div>
     
     <% @events.each do |event| %>
-       <div class="card mb-3" style="max-width: 1500px;">
+       <div class="card border-secondary mb-3" style="max-width: 1500px;">
       <h5 class="card-header"> <%= event.name %> </h5>
       <div class="row g-0 align-items-start">
         <div class="col">
