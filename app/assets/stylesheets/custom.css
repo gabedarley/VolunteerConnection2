@@ -53,6 +53,9 @@ table {
     border-radius: 10px;
 }
 
+#cal-time {
+    font-size: small
+}
 
 #organizations-text {
     color: #1d96fc
