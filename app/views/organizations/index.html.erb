@@ -19,13 +19,30 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
     
         <% @organizations.each do |organization| %>
-        <div class="col">  
+        <div class="col">
+        <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
         <div class="card h-100 border-primary">
           <h5 class="card-header"> <%= organization.name %> </h5>
           <%= image_tag "#{organization.image}", alt: "Photo of #{organization}", height:"200px", crop:"pad" =%>
           <div class="card-body">
-            <p class="card-text" id="organizations-text"> <%= organization.category %> <td><%= link_to image_tag("eye.jfif", size: "30"), organization%></td> </p>
+            <p class="card-text" id="organizations-text"> <%= organization.category %> </p>
           </div>
+        </div>
+            </div>
+            <div class="flip-card-back">
+             <div class="card h-100 border-primary">
+              <h5 class="card-header"> <%= organization.name %> </h5>
+              <div class="card-body">
+                    <p class="card-text" id="organizations-text"> <%= organization.category %> </p>
+                    <p class="card-text"> <%= organization.contact_phone %> </p>
+                    <p class="card-text"> <%= organization.contact_email %> </p>
+                    <%= link_to 'See more', organization, class:"btn btn-primary" %>
+              </div>
+             </div>
+    </div>
+        </div>
         </div>
         </div>
         <% end %>
