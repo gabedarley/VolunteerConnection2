@@ -45,9 +45,9 @@
             <p><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></p>
              <% if signed_in? %>
              <% if event.added?(current_user) %>
-                <p><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %></p>
+                <p><%= button_to "+", add_path(event), method: "put", class:"btn btn-secondary btn-sm mb-5", disabled: true %></p>
             <% else %>
-                <p><%= button_to "+", add_path(event), method: "put", class:"btn btn-primary btn-sm mb-5" %></p>
+                <p><%= button_to "+", add_path(event), method: "put", class:"btn btn-secondary btn-sm mb-5" %></p>
             <% end %>
         <% end %>
           </div>
