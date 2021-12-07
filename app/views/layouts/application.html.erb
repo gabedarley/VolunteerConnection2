@@ -37,11 +37,11 @@
       </button>
         
       <button type="button" class="btn">
-          <td class = "nav-item"><%= link_to 'Organizations', organizations_url %></td>
+          <td><%= link_to 'Organizations', organizations_url, class: "nav-item-primary" %></td>
       </button>
         
       <button type="button" class="btn">
-          <td class = "nav-item"><%= link_to 'Events', events_url %></td>
+          <td class = "nav-item"><%= link_to 'Events', events_url, class: "nav-item-secondary" %></td>
       </button>
        
        <% if signed_in? %>
