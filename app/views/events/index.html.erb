@@ -5,9 +5,9 @@
   </head>
 
 
-<div class="container mt-3 p-1 my-5">
+<div class="container mt-3 p-5 my-5">
 
-    <div class = "container pb-5">
+    
         <div class="row">
         <div class="col">
             <h1>Events</h1>
@@ -17,7 +17,6 @@
             </div>
         
         </div>
-    </div> 
     
     <% @events.each do |event| %>
        <div class="card mb-3" style="max-width: 1500px;">
@@ -27,15 +26,15 @@
               <%= image_tag "#{event.organization.image}", alt: "Photo of #{event.organization}", class:"img-responsive", width:"300px", height:"200px", crop:"pad" =%>
            
           </div>
-        <div class="col-2">
+        <div class="col-3">
           <div class="card-body">
               
                 <p class="card-text"> <b>Date:</b> <%= event.date %> </p>
-                <p class="card-text"> <b>Start time:</b> <%= event.start_time %> </p>
-                <p class="card-text"> <b>End time:</b> <%= event.end_time %> </p>
+                <p class="card-text"> <b>Start time:</b> <%= event.start_time.strftime("%I:%M %p") %> </p>
+                <p class="card-text"> <b>End time:</b> <%= event.end_time.strftime("%I:%M %p") %> </p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-5">
           <div class="card-body">
                 <p class="card-text"> <%= event.description %></p>
                 
