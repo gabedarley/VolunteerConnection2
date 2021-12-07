@@ -63,7 +63,7 @@ table {
   background-color: transparent;
   width: 300px;
   height: 300px;
-  border: 1px solid #f1f1f1;
+  border-radius: 25px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -91,14 +91,9 @@ table {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
+
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
   transform: rotateY(180deg);
 }
