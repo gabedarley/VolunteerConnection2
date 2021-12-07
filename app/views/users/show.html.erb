@@ -22,7 +22,8 @@
       <%= date.day %>
     <% meetings.each do |meeting| %>
     <div class="container bg-secondary cal-meeting">
-      <%= meeting.name %>
+      <%= link_to "#{meeting.name}", meeting, class: "white-link" %>
+      <p id="cal-time"><%= meeting.start_time.strftime("%I:%M %p") %> - <%= meeting.end_time.strftime("%I:%M %p") %></p>  
     </div>
   <% end %>
     <% end %>

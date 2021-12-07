@@ -5,9 +5,7 @@
   </head>
 
 
-<div class="container mt-3 p-5 my-5">
-
-    
+<div class="container mt-3 p-5 my-5">    
         <div class="row">
         <div class="col">
             <h1 id="events-text">Events</h1>
@@ -19,7 +17,7 @@
         </div>
     
     <% @events.each do |event| %>
-       <div class="card border-secondary mb-3" style="max-width: 1500px;">
+       <div class="card border-secondary mb-3" style="max-width: 1500px;" id="event-card">
       <h5 class="card-header"> <%= event.name %> </h5>
       <div class="row g-0 align-items-start">
         <div class="col">
