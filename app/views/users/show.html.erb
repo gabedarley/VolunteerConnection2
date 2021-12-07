@@ -17,10 +17,11 @@
 </div>
 
 <div class="container bg-light mt-3 p-5 my-5">
+    <h2>Events Calendar</h2>
     <%= month_calendar(events: @user.events) do |date, meetings| %>
       <%= date.day %>
     <% meetings.each do |meeting| %>
-    <div>
+    <div class="container bg-secondary">
       <%= meeting.name %>
     </div>
   <% end %>
@@ -34,8 +35,8 @@
     
         <% @user.events.each do |event| %>
         <div class="col">  
-        <div class="card" style="width:400px">
-          <%= image_tag "#{event.organization.image}", alt: "Homepage logo with two smiling faces", width:"400px", height:"200px", crop:"pad" =%>
+        <div class="card">
+          <%= image_tag "#{event.organization.image}", alt: "Homepage logo with two smiling faces", width:"100%", height:"200px", crop:"pad" =%>
           <div class="card-body">
             <h4 class="card-title"> <%= event.name %> </h4>
             <p class="card-text"> <%= event.date %> </p>

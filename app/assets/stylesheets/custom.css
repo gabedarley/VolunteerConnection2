@@ -1,6 +1,12 @@
 .btn-primary {
     color: #fff;
-    text-decoration-color: #FFFFFF;
+    background-color: #1d96fc;
+    border-color: #1d96fc
+}
+
+.btn-primary:hover {
+    color: #fff;
+    filter: brightness(0.9);
     background-color: #1d96fc;
     border-color: #1d96fc
 }
@@ -10,4 +16,17 @@
     background-color: #f45291;
     border-color: #f45291
 
+}
+
+.btn-secondary:hover {
+    
+    color: #fff;
+    filter: brightness(0.9);
+    background-color: #f45291;
+    border-color: #f45291
+    
+}
+
+table {
+    table-layout : fixed;
 }
