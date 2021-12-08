@@ -4,19 +4,40 @@
     <title>Organizations</title>
   </head>
 
+    <script>
+function myFunction() {
+    var input, filter, cards, cardContainer, h5, title, i;
+    input = document.getElementById("myFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("myItems");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-header");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+    </script>
+    
 
 <div class="container mt-3 p-5 my-5">
 <div class="row">
         <div class="col">
             <h1 id="organizations-text">Organizations</h1>
-            </div>    
-        <div class="col">
+            </div>   
+     <div class="col text-right">
+                     <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Find an organization...">
+                </div>
+        <div class="col-2">
             <%= link_to 'New Organization', new_organization_path, class:"btn btn-primary float-end ml-auto" %>
             </div>
         
         </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="myItems">
     
         <% @organizations.each do |organization| %>
         <div class="col">
