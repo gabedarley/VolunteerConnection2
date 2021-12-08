@@ -20,6 +20,27 @@ function myFunction() {
         }
     }
 }
+        
+var filter = (filter) => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("col");
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector(".card-body");
+        if (title.innerText.indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+var clearAll = () => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("col");
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "";
+    }
+}
     </script>
     
 
@@ -36,6 +57,10 @@ function myFunction() {
             </div>
         
         </div>
+        <h4>Filter by category</h4>
+        <button onclick="filter('Food')">Food</button>
+        <button onclick="filter('Education')">Education</button>
+        <button onclick="clearAll()">Clear</button>
 
     <div class="row row-cols-1 row-cols-md-3 g-4" id="myItems">
     
