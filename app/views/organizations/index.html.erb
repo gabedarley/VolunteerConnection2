@@ -10,7 +10,7 @@ function myFunction() {
     input = document.getElementById("myFilter");
     filter = input.value.toUpperCase();
     cardContainer = document.getElementById("myItems");
-    cards = cardContainer.getElementsByClassName("card");
+    cards = cardContainer.getElementsByClassName("col");
     for (i = 0; i < cards.length; i++) {
         title = cards[i].querySelector(".card-header");
         if (title.innerText.toUpperCase().indexOf(filter) > -1) {
