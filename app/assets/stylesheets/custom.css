@@ -16,30 +16,29 @@
 }
 
 .btn-outline-primary {
-    color: #1d96fc;
+    color: #1d96fc!important;
     background-color: #fff;
-    border-color: #1d96fc
+    border-color: #1d96fc!important
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #1d96fc;
-    border-color: #1d96fc
+    background-color: #1d96fc!important;
+    border-color: #1d96fc!important
 }
 
 .btn-secondary {
     color: #fff;
-    background-color: #ff0054;
-    border-color: #ff0054
+    background-color: #ff0054!important;
+    border-color: #ff0054!important
 
 }
 
 .btn-secondary:hover {
     
     color: #fff;
-    filter: brightness(0.9);
-    background-color: #ff0054;
-    border-color: #ff0054
+    background-color: #ff0054!important;
+    border-color: #ff0054!important
     
 }
 
