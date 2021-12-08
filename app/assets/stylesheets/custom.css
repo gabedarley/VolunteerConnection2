@@ -15,6 +15,18 @@
     border-color: #1d96fc
 }
 
+.btn-outline-primary {
+    color: #1d96fc;
+    background-color: #fff;
+    border-color: #1d96fc
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #1d96fc;
+    border-color: #1d96fc
+}
+
 .btn-secondary {
     color: #fff;
     background-color: #ff0054;
@@ -29,6 +41,18 @@
     background-color: #ff0054;
     border-color: #ff0054
     
+}
+
+.btn-outline-secondary {
+    color: #ff0054;
+    background-color: #fff;
+    border-color: #ff0054
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #ff0054;
+    border-color: #ff0054
 }
 
 table {

@@ -10,7 +10,7 @@ function myFunction() {
     input = document.getElementById("myFilter");
     filter = input.value.toUpperCase();
     cardContainer = document.getElementById("myItems");
-    cards = cardContainer.getElementsByClassName("card");
+    cards = cardContainer.getElementsByClassName("col");
     for (i = 0; i < cards.length; i++) {
         title = cards[i].querySelector(".card-header");
         if (title.innerText.toUpperCase().indexOf(filter) > -1) {
@@ -18,6 +18,27 @@ function myFunction() {
         } else {
             cards[i].style.display = "none";
         }
+    }
+}
+        
+var filter = (filter) => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("col");
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector(".card-body");
+        if (title.innerText.indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+var clearAll = () => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("col");
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "";
     }
 }
     </script>
@@ -32,11 +53,26 @@ function myFunction() {
                      <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Find an organization...">
                 </div>
         <div class="col-2">
+            <div class="row">
             <%= link_to 'New Organization', new_organization_path, class:"btn btn-primary float-end ml-auto" %>
-            </div>
+                 </div>
+                 </div>
         
         </div>
-
+<!-- <div class="row">
+    <div class="col text-left">
+        <div class="container ml-0"> -->
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Build')">Build</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Education</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Food')">Food</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Garden')">Garden</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Health</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Relief')">Relief</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Rescue')">Rescue</button>
+            <button type="button" class="btn btn-primary mb-2" onclick="clearAll()">Clear</button>
+<!--         </div>
+    </div>
+</div> -->
     <div class="row row-cols-1 row-cols-md-3 g-4" id="myItems">
     
         <% @organizations.each do |organization| %>

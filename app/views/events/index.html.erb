@@ -20,6 +20,27 @@ function myFunction() {
         }
     }
 }
+        
+var filter = (filter) => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("card");
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].querySelector("#events-text");
+        if (title.innerText.indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+var clearAll = () => {
+    var cardContainer = document.getElementById("myItems");
+    var cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        cards[i].style.display = "";
+    }
+}
     </script>
 
 
@@ -31,10 +52,22 @@ function myFunction() {
         <div class="col text-right">
                      <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Find an event by description...">
                 </div>
-                <div class="col-2">            
-                    <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end ml-auto" %>     
+                <div class="col-2"> 
+                    <div class="row">
+                        <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end ml-auto" %>
+                    </div>
+                         
                 </div>
         </div>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Build')">Build</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Education')">Education</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Food')">Food</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Garden')">Garden</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Education')">Health</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Relief')">Relief</button>
+            <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Rescue')">Rescue</button>
+            <button type="button" class="btn btn-secondary mb-2" onclick="clearAll()">Clear</button>
+
     
     <% @events.each do |event| %>
        <div class="card border-secondary mb-3" style="max-width: 1500px;" id="event-card">
@@ -55,6 +88,7 @@ function myFunction() {
         <div class="col-5">
           <div class="card-body" id="event-description">
                 <p class="card-text"> <%= event.description %></p>
+                <p class="card-text" id="events-text"> <%= event.organization.category %></p>
                 
           </div>
         </div>
