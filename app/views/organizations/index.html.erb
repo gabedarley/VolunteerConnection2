@@ -57,11 +57,20 @@ var clearAll = () => {
             </div>
         
         </div>
-        <h4>Filter by category</h4>
-        <button onclick="filter('Food')">Food</button>
-        <button onclick="filter('Education')">Education</button>
-        <button onclick="clearAll()">Clear</button>
-
+<!-- <div class="row">
+    <div class="col text-left">
+        <div class="container ml-0"> -->
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Build')">Build</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Education</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Food')">Food</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Garden')">Garden</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Health</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Relief')">Relief</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Rescue')">Rescue</button>
+            <button type="button" class="btn btn-primary mb-2" onclick="clearAll()">Clear</button>
+<!--         </div>
+    </div>
+</div> -->
     <div class="row row-cols-1 row-cols-md-3 g-4" id="myItems">
     
         <% @organizations.each do |organization| %>
