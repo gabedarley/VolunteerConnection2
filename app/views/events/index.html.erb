@@ -4,14 +4,35 @@
     <title>Events</title>
   </head>
 
+    <script>
+        function myFunction() {
+            var input, filter, cards, cardContainer, h5, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cardContainer = document.getElementById("myItems");
+            cards = cardContainer.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector(".card-header");
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
-<div class="container mt-3 p-5 my-5">    
+<div class="container mt-3 p-5 my-5" id="myItems">    
         <div class="row">
         <div class="col">
             <h1 id="events-text">Events</h1>
             </div>    
         <div class="col">
             <%= link_to 'New Event', new_event_path, class:"btn btn-secondary float-end ml-auto" %>
+            </div>
+        
+        <div class="colo">
+            <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search for names..">
             </div>
         
         </div>
