@@ -22,7 +22,7 @@
 }
 
 .btn-outline-primary:hover {
-    color: #fff;
+    color: #fff!important;
     background-color: #1d96fc!important;
     border-color: #1d96fc!important
 }
