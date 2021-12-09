@@ -25,10 +25,10 @@ ActiveRecord::Schema.define(version: 20211206205753) do
     t.string   "name"
     t.string   "description"
     t.string   "date"
-    t.datetime "start_time"
-    t.datetime "end_time"
     t.string   "link"
     t.integer  "organization_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
   end
 
   create_table "events_users", id: false, force: :cascade do |t|
