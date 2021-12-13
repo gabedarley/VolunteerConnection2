@@ -6,8 +6,6 @@ gem 'rolify'
 gem 'rails_12factor', group: :production
 gem "simple_calendar", "~> 2.4"
 
-
-
 gem 'omniauth-facebook'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
@@ -58,3 +56,5 @@ group :production do
 end
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
+

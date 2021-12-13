@@ -68,7 +68,6 @@ var clearAll = () => {
             <button type="button" class="btn btn-outline-secondary mb-2" onclick="filter('Rescue')">Rescue</button>
             <button type="button" class="btn btn-secondary mb-2" onclick="clearAll()">Clear</button>
 
-    
     <% @events.each do |event| %>
        <div class="card border-secondary mb-3" style="max-width: 1500px;" id="event-card">
       <h5 class="card-header"> <%= event.name %> </h5>
@@ -109,5 +108,8 @@ var clearAll = () => {
     
     </div>
     <% end %>
+   <br>
+    <%= paginate @events %>
+
 </div>
 
