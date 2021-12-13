@@ -19,5 +19,7 @@ class Event < ActiveRecord::Base
   def added?(user)
       !!user.events.find{|ex_event| ex_event.id == self.id}
   end
+    
+  paginates_per 6
 
 end

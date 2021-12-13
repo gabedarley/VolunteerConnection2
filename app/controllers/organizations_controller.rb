@@ -5,7 +5,8 @@ class OrganizationsController < ApplicationController
   # GET /organizations.json
     
   def index
-    @organizations = Organization.order(params[:sort])
+    @organizations = Organization.order(:name).page params[:page]
+
   end
     
   def results(address)
