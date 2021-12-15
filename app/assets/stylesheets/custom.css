@@ -1,3 +1,10 @@
+.text-center {
+    font-family: "Tahoma", sans-serif;
+    font-size: 50px;
+    font-weight: bold
+}
+
+
 .container {
     border-radius: 10px;
 }
@@ -5,32 +12,37 @@
 .btn-primary {
     color: #fff;
     background-color: #1d96fc;
-    border-color: #1d96fc
+    border-color: #1d96fc;
+    font-family: "Tahoma", sans-serif
 }
 
 .btn-primary:hover {
     color: #fff;
     filter: brightness(0.9);
     background-color: #1d96fc;
-    border-color: #1d96fc
+    border-color: #1d96fc;
+    font-family: "Tahoma", sans-serif
 }
 
 .btn-outline-primary {
     color: #1d96fc!important;
     background-color: #fff;
-    border-color: #1d96fc!important
+    border-color: #1d96fc!important;
+    font-family: "Tahoma", sans-serif
 }
 
 .btn-outline-primary:hover {
     color: #fff!important;
     background-color: #1d96fc!important;
-    border-color: #1d96fc!important
+    border-color: #1d96fc!important;
+    font-family: "Tahoma", sans-serif
 }
 
 .btn-secondary {
     color: #fff;
     background-color: #ff0054!important;
-    border-color: #ff0054!important
+    border-color: #ff0054!important;
+    font-family: "Tahoma", sans-serif
 
 }
 
@@ -38,20 +50,23 @@
     
     color: #fff;
     background-color: #ff0054!important;
-    border-color: #ff0054!important
+    border-color: #ff0054!important;
+    font-family: "Tahoma", sans-serif
     
 }
 
 .btn-outline-secondary {
     color: #ff0054;
     background-color: #fff;
-    border-color: #ff0054
+    border-color: #ff0054;
+    font-family: "Tahoma", sans-serif
 }
 
 .btn-outline-secondary:hover {
     color: #fff;
     background-color: #ff0054;
-    border-color: #ff0054
+    border-color: #ff0054;
+    font-family: "Tahoma", sans-serif
 }
 
 table {
