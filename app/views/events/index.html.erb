@@ -92,8 +92,8 @@ var clearAll = () => {
           </div>
         </div>
         <div class="col me-auto">
-            <%= link_to image_tag("eye.jfif", size: "30"), event%>
-            <p><%= link_to image_tag("pencil.jfif", size: "30"), edit_event_path(event) %></p>
+            <%= link_to image_tag("eye.jfif", size: "30", alt: "Eye Icon"), event%>
+            <p><%= link_to image_tag("pencil.jfif", size: "30", alt: "Pencil Icon"), edit_event_path(event) %></p>
              <% if signed_in? %>
              <% if event.added?(current_user) %>
                 <p><%= button_to "+", add_path(event), method: "put", class:"btn btn-secondary btn-sm mb-5", disabled: true %></p>
@@ -109,7 +109,6 @@ var clearAll = () => {
     </div>
     <% end %>
    <br>
-    <%= paginate @events %>
-
+       <%= paginate @events %>
 </div>
 
