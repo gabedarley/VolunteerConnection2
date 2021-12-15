@@ -13,3 +13,8 @@ function myFunction() {
         }
     }
 }
+
+function hideShow() {
+  var x = document.getElementById("map-hide");
+  x.style.display = "none";
+}

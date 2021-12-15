@@ -10,7 +10,7 @@
       }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
-    <title>Organization Info</title>
+      <title>Organization Info</title>
   </head>
     
     
@@ -82,11 +82,28 @@
                 </div>
             </div>
         </div>
+          <button type="button" class="btn btn-outline-primary mb-2" onclick= "hideShow()">Toggle Map!</button>
+
         </div>
-    <h2 class = "text-center">Find your way there!</h2>
-    <div class = "container p-5 my-5">
-        <div id="map" class="map"></div>
+    <script>
+        function hideShow() {
+          var x = document.getElementById("map-hide");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+    <style>
+    </style>
+    <div id = "map-hide">
+        <h2 class = "text-center" >Find your way there!</h2>
+        <div class = "container p-5 my-5 " >
+            <div id="map" class="map"></div>
+        </div>
     </div>
+    
     <script type="text/javascript">
 
       var results = <%=results(@organization.address)=%>;
