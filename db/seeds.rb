@@ -327,7 +327,8 @@ end
 users = [
    {
     :email => 'cuhls@tulane.edu',
-    :password => 'ilikedogs'},
+    :password => 'ilikedogs',
+    :userName => 'Chloe'},
    {
     :email => 'gdarley@tulane.edu',
     :password => 'password123'},
