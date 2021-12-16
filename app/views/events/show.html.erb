@@ -1,45 +1,79 @@
 <div class="container p-5 my-5 bg-light text-dark">
 
+<div class="row">
+    <div class="col-8">
+        
+        <h1><%= @event.name %></h1>
 
 
-<h1><%= @event.name %></h1>
-  
 
+        <p>
+          <strong>Date:</strong>
+          <%= @event.date %>
+        </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+        <p>
+          <strong>Start time:</strong>
+          <%= @event.start_time.strftime("%I:%M%p") %>
+        </p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time.strftime("%I:%M%p") %>
-</p>
+        <p>
+          <strong>End time:</strong>
+          <%= @event.end_time.strftime("%I:%M%p") %>
+        </p>
 
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time.strftime("%I:%M%p") %>
-</p>
+        <p>
+          <strong>Organization:</strong>
+          <%= @event.organization.name %>
+        </p>
+
+        <p>
+          <strong>Link:</strong>
+          <%= link_to "#{@event.name}", "#{@event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
+        </p>
+
+        <% if signed_in? %>
+            <% if @event.added?(current_user) %>
+                <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %>
+            <% else %>
+                <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5" %>
+            <% end %>
+        <% end %>
+
+        <%= link_to 'Edit', edit_event_path(@event) %> |
+        <%= link_to 'Back', events_path %>
+    </div>
     
-<p>
-  <strong>Organization:</strong>
-  <%= @event.organization.name %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= link_to "#{@event.name}", "#{@event.link}", :target => '_blank', style: 'color:#0080ff;', class: 'css_class'  %>
-</p>
-
-<% if signed_in? %>
-    <% if @event.added?(current_user) %>
-        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5", disabled: true %>
-    <% else %>
-        <%= button_to "Add Event to Profile", add_path(@event), method: "put", class:"btn btn-primary btn-sm mb-5" %>
-    <% end %>
-<% end %>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+    <div class="col">
+        
+        <div class="container p-3 h-100 bg-white border border-primary">
+        <h3 id="organizations-text">Host</h3>
+                <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+        <div class="card h-100 border-primary">
+          <h5 class="card-header"> <%= @event.organization.name %> </h5>
+          <%= image_tag "#{@event.organization.image}", alt: "Photo of #{@event.organization} in action", height:"200px", crop:"pad" =%>
+          <div class="card-body">
+            <p class="card-text" id="organizations-text"> <%= @event.organization.category %> </p>
+          </div>
+        </div>
+            </div>
+            <div class="flip-card-back">
+             <div class="card h-100 border-primary">
+              <h5 class="card-header"> <%= @event.organization.name %> </h5>
+              <div class="card-body">
+                    <p class="card-text" id="organizations-text"> <%= @event.organization.category %> </p>
+                    <p class="card-text"> <%= @event.organization.contact_phone %> </p>
+                    <p class="card-text"> <%= @event.organization.contact_email %> </p>
+                    <%= link_to 'See more', @event.organization, class:"btn btn-primary" %>
+              </div>
+             </div>
+    </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
 
 </div>

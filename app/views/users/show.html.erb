@@ -5,19 +5,19 @@
 
 <div class="container p-5 my-5 bg-light text-dark">
     <h1>Volunteer Profile</h1>
-    
-    <p>
+            <p>
         <strong>Primary Email:</strong>
         <%= @user.email %>
     </p>
     
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary mb-5">
           <a class="nav-item"><%= link_to "Edit Information", edit_user_registration_path %></a>
     </button>
-</div>
 
-<div class="container bg-light mt-3 p-5 my-5">
-    <h2>Events Calendar</h2>
+        
+
+
+<h2>Events Calendar</h2>
     <%= month_calendar(events: @user.events) do |date, meetings| %>
       <%= date.day %>
     <% meetings.each do |meeting| %>
@@ -27,7 +27,11 @@
     </div>
   <% end %>
     <% end %>
-</div>
+
+        </div>
+       
+    
+    
     
     
 <div class="container bg-primary mt-3 p-5 my-5">

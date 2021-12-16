@@ -67,8 +67,7 @@
                   </thead>
 
                   <tbody>
-
-                    <% @organization.events.each do |event| %>
+                    <% @organization.events.order(:start_time).each do |event| %>
                       <tr>
                         <td><%= link_to "#{event.name}", "#{event.link}", :target => '_blank', class: "nav-item-secondary"  %></td>
                         <td><%= event.date %></td>
