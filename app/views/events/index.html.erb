@@ -33,6 +33,13 @@ function myFunction() {
             cards[i].style.display = "none";
         }
     }
+    var inputText = document.getElementById("myFilter").value;
+    if (inputText){
+        hidePagination();
+    }
+    else{
+        showPagination();
+    }
 }
         
 var filter = (filter) => {
@@ -122,7 +129,7 @@ var clearAll = () => {
     
     </div>
     <% end %>
-        <div id='paginate' style="display: block;">
+        <div id='paginate' class="" style="display: block;">
             <%= paginate @events %>
         </div>
 </div>
