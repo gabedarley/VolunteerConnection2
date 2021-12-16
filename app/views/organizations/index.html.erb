@@ -33,6 +33,14 @@ function myFunction() {
             cards[i].style.display = "none";
         }
     }
+    var inputText = document.getElementById("myFilter").value;
+    if (inputText){
+        hidePagination();
+    }
+    else{
+        showPagination();
+    }
+
 }
         
 var filter = (filter) => {
