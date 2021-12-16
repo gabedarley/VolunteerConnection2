@@ -54,7 +54,7 @@
         <div class="card h-100 border-primary">
           <h5 class="card-header"> <%= @event.organization.name %> </h5>
             <% if organization.image %>
-              <%= image_tag "#{organization.image}", alt: "Photo of #{organization} in action", height:"200px", crop:"pad" =%>
+              <%= image_tag "#{@event.organization.image}", alt: "Photo of #{@event.organization} in action", height:"200px", crop:"pad" =%>
             <% end %>          
             <div class="card-body">
             <p class="card-text" id="organizations-text"> <%= @event.organization.category %> </p>
