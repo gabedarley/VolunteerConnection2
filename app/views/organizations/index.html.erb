@@ -104,8 +104,10 @@ var clearAll = () => {
             <div class="flip-card-front">
         <div class="card h-100 border-primary">
           <h5 class="card-header"> <%= organization.name %> </h5>
-          <%= image_tag "#{organization.image}", alt: "Photo of #{organization} in action", height:"200px", crop:"pad" =%>
-          <div class="card-body">
+            <% if organization.image %>
+              <%= image_tag "#{organization.image}", alt: "Photo of #{organization} in action", height:"200px", crop:"pad" =%>
+            <% end %>
+            <div class="card-body">
             <p class="card-text" id="organizations-text"> <%= organization.category %> </p>
           </div>
         </div>
