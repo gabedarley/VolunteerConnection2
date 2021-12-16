@@ -71,7 +71,11 @@
 
        <% if signed_in? %>
         <button type="button" class="btn">
-          <a class="text-primary"><%= link_to "Hello, #{current_user.email}", users_show_path %></a>
+            <% if current_user.userName %>
+              <a class="text-primary"><%= link_to "Hello, #{current_user.userName}!", users_show_path %></a>
+            <% else %>
+              <a class="text-primary"><%= link_to "Hello, #{current_user.email}!", users_show_path %></a>
+            <% end %>
       </button>
         <% end %>
       
