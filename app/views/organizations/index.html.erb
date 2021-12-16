@@ -5,6 +5,20 @@
   </head>
 
     <script>
+function hidePagination(){
+    var paginate = document.getElementById("paginate");
+      if (paginate.style.display === "block") {
+        paginate.style.display = "none";
+      }
+}
+        
+function showPagination(){
+    var paginate = document.getElementById("paginate");
+      if (paginate.style.display === "none") {
+        paginate.style.display = "block";
+      }
+}        
+
 function myFunction() {
     var input, filter, cards, cardContainer, h5, title, i;
     input = document.getElementById("myFilter");
@@ -32,6 +46,7 @@ var filter = (filter) => {
             cards[i].style.display = "none";
         }
     }
+    
 }
 
 var clearAll = () => {
@@ -59,20 +74,16 @@ var clearAll = () => {
                  </div>
         
         </div>
-<!-- <div class="row">
-    <div class="col text-left">
-        <div class="container ml-0"> -->
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Build')">Build</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Education</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Food')">Food</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Garden')">Garden</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education')">Health</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Relief')">Relief</button>
-            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Rescue')">Rescue</button>
-            <button type="button" class="btn btn-primary mb-2" onclick="clearAll()">Clear</button>
-<!--         </div>
-    </div>
-</div> -->
+
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Build');hidePagination();">Build</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Education');hidePagination();">Education</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Food');hidePagination();">Food</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Garden');hidePagination();">Garden</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Health');hidePagination();">Health</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Relief');hidePagination();">Relief</button>
+            <button type="button" class="btn btn-outline-primary mb-2" onclick="filter('Rescue');hidePagination();">Rescue</button>
+            <button type="button" class="btn btn-primary mb-2" onclick="clearAll();showPagination();">Clear</button>
+
     <div class="row row-cols-1 row-cols-md-3 g-4" id="myItems">
     
         <% @organizations.each do |organization| %>
@@ -103,9 +114,10 @@ var clearAll = () => {
         </div>
         </div>
         <% end %>
+        <div id='paginate' style="display: block;">
+            <%= paginate @organizations %>
+        </div>
     </div>
-    <br>
-    <%= paginate @organizations %>
 
     
 
