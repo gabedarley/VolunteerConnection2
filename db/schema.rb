@@ -59,8 +59,6 @@ ActiveRecord::Schema.define(version: 20211216095142) do
     t.datetime "updated_at",                          null: false
     t.string   "provider"
     t.string   "uid"
-    t.string   "firstName"
-    t.string   "lastName"
     t.string   "userName"
   end
 
