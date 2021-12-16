@@ -331,25 +331,32 @@ users = [
     :userName => 'Chloe'},
    {
     :email => 'gdarley@tulane.edu',
-    :password => 'password123'},
+    :password => 'password123',
+    :userName => 'Gabe'},
    {
     :email => 'emoy@tulane.edu',
-    :password =>'password302' },
+    :password =>'password302',
+    :userName => 'Eddie'},
    {
     :email => 'skellum@tulane.edu',
-    :password => 'password239'},
+    :password => 'password239',
+    :userName => 'Sam'},
    {
     :email => 'akurdia@tulane.edu',
-    :password => 'password873'},
+    :password => 'password873',
+    :userName => 'Anastasia'},
    {
     :email => 'sbroth@tulane.edu',
-    :password => 'password888'},
+    :password => 'password888',
+    :userName => 'Sam'},
    {
     :email => 'obulter@tulane.edu',
-    :password => 'password399'},
+    :password => 'password399',
+    :userName => 'Owen'},
    {
     :email => 'ocanosa@tulane.edu',
-    :password => 'password033'},
+    :password => 'password033',
+    :userName => 'Oliver'},
    {
     :email => 'adonahue@tulane.edu',
     :password => 'password328'},
@@ -358,28 +365,35 @@ users = [
     :password => 'password022'},
    {
     :email => 'ggilliom@tulane.edu',
-    :password => 'password477'},
+    :password => 'password477',
+    :userName => 'Garrett'},
    {
     :email => 'bkahn@tulane.edu',
-    :password => 'password832'},
+    :password => 'password832',
+    :userName => 'Benett'},
    {
     :email => 'jlehner@tulane.edu',
-    :password => 'password473'},
+    :password => 'password473',
+    :userName => 'Jake'},
    {
     :email => 'cmaira@tulane.edu',
-    :password => 'password678'},
+    :password => 'password678',
+    :userName => 'Cooper'},
    {
     :email => 'mmotz@tulane.edu',
-    :password => 'password002'},
+    :password => 'password002',
+    :userName => 'Max'},
    {
     :email => 'econnell@tulane.edu',
     :password => 'password453'},
    {
     :email => 'kromer@tulane.edu',
-    :password => 'password193'},
+    :password => 'password193',
+    :userName => 'Kelly'},
    {
     :email => 'msender@tulane.edu',
-    :password => 'password772'},
+    :password => 'password772',
+    :userName => 'Max'},
    {
     :email => 'yzhang@tulane.edu',
     :password => 'password892'},
