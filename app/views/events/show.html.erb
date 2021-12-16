@@ -53,7 +53,7 @@
             <div class="flip-card-front">
         <div class="card h-100 border-primary">
           <h5 class="card-header"> <%= @event.organization.name %> </h5>
-            <% if organization.image %>
+            <% if @event.organization.image %>
               <%= image_tag "#{@event.organization.image}", alt: "Photo of #{@event.organization} in action", height:"200px", crop:"pad" =%>
             <% end %>          
             <div class="card-body">
