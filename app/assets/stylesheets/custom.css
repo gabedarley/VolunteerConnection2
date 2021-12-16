@@ -107,6 +107,11 @@ table {
     color: #ff0054
 }
 
+#cal-title {
+    color: #ff0054;
+    font-size: 30px!important;
+}
+
 .flip-card {
   background-color: transparent;
   width: auto;
