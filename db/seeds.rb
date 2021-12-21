@@ -56,7 +56,7 @@ organizations = [
    :image => 'audubon.jpg'},
     #7
   {:name => 'Cajun Navy Relief',
-   :address => 'Cajun Navy Relief, Inc. PO Box 791632 New Orleans, LA 70179',
+   :address => 'New Orleans, LA 70179',
    :web_address => 'https://www.cajunnavyrelief.com/',
    :contact_phone => '504-517-6289',
    :contact_email => 'info@cajunnavyrelief.com',
@@ -72,7 +72,7 @@ organizations = [
    :image => 'edibleschoolyard.jpg' },
     #9
   {:name => 'Nola 4 Women',
-   :address => '5208 Magazine St #164, New Orleans, LA 70115',
+   :address => '5208 Magazine St, New Orleans, LA 70115',
    :web_address => 'https://www.nola4women.org/',
    :contact_phone => '999-999-9999',
    :contact_email => 'kathy@nola4women.org',
@@ -80,7 +80,7 @@ organizations = [
    :image => 'nola4.jfif'},
     #10
   {:name => 'Planned Parenthood',
-   :address => '4636 S Claiborne Ave Ste 100, New Orleans, LA 70125',
+   :address => '4636 S Claiborne Ave, New Orleans, LA 70125',
    :web_address => 'https://www.plannedparenthood.org/health-center/louisiana/new-orleans/70125/new-orleans-health-center-3961-91650',
    :contact_phone => '504-897-9200',
    :contact_email => 'none@gmail.com',
@@ -96,7 +96,7 @@ organizations = [
    :image => 'greenlight.jpg'},
     #12
   {:name => 'Grace at the Greenlight',
-   :address => '1528 Oretha Castle Haley Blvd, New Orleans, LA 70130', 
+   :address => '1528 Oretha C Haley Blvd, New Orleans, LA 70113', 
    :web_address => 'https://graceatthegreenlight.org/', 
    :contact_phone => '504-239-4544', 
    :contact_email => 'sarah@graceatthegreenlight.org',
@@ -112,7 +112,7 @@ organizations = [
    :image => 'jericho.jpg'},
     #14
   {:name => 'Please Foundation',
-   :address => 'P.O. Box 9223, Metairie, LA 70055', 
+   :address => 'Metairie, LA 70055', 
    :web_address => 'https://www.pleasefoundation.org/index.php', 
    :contact_phone => '504-554-0856', 
    :contact_email => 'yvette.pleasefoundation@gmail.com',
@@ -128,7 +128,7 @@ organizations = [
    :image => 'literacy.jpg'},
     #16
   {:name => 'Code For New Orleans',
-   :address => '365 Canal St #3100, New Orleans, LA 70130', 
+   :address => '365 Canal St, New Orleans, LA 70130', 
    :web_address => 'https://codeforneworleans.org/pages/about.html', 
    :contact_phone => '504-227-4438', 
    :contact_email => 'ryan@codeforneworleans.org',
@@ -152,7 +152,7 @@ organizations = [
    :image => 'gnof.jpg'},
     #19
   {:name => 'Friends of City Park',
-   :address => '1 Palm Drive, New Orleans, LA 70124', 
+   :address => 'New Orleans, LA 70124', 
    :web_address => 'https://www.friendsofcitypark.com/', 
    :contact_phone => '504-483-9376', 
    :contact_email  => 'friends@friendsofcitypark.com',
